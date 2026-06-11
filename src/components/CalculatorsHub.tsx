@@ -7,6 +7,85 @@ import { Calculator, ArrowLeft, Info, Search, Sparkles, ArrowRight } from 'lucid
 import confetti from 'canvas-confetti';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// ── Markdown → HTML renderer ────────────────────────────────────────────────
+function renderMarkdown(md: string): string {
+  const lines = md.split('\n');
+  const out: string[] = [];
+  let inList = false;
+  let inOrderedList = false;
+
+  const closeList = () => {
+    if (inList)        { out.push('</ul>'); inList = false; }
+    if (inOrderedList) { out.push('</ol>'); inOrderedList = false; }
+  };
+
+  for (let raw of lines) {
+    const line = raw.trimEnd();
+
+    // Skip blank lines — just add spacing
+    if (line.trim() === '') {
+      closeList();
+      out.push('<div class="h-2"></div>');
+      continue;
+    }
+
+    // Math block: $$...$$  → styled formula box
+    if (/\$\$(.+)\$\$/.test(line)) {
+      closeList();
+      const formula = line.replace(/\$\$(.+)\$\$/, '$1').trim();
+      out.push(`<div class="my-2 px-3 py-2 rounded-lg bg-blue-950/40 border border-blue-800/30 font-mono text-blue-300 text-[11px] overflow-x-auto">${formula}</div>`);
+      continue;
+    }
+
+    // Headings
+    if (/^####\s+/.test(line)) {
+      closeList();
+      out.push(`<h5 class="text-[11px] font-bold text-gray-200 uppercase tracking-wide mt-4 mb-1">${inlineFormat(line.replace(/^####\s+/, ''))}</h5>`);
+      continue;
+    }
+    if (/^###\s+/.test(line)) {
+      closeList();
+      out.push(`<h4 class="text-xs font-extrabold text-white mt-5 mb-2 flex items-center gap-1.5"><span class="inline-block w-1 h-3 bg-blue-500 rounded-sm"></span>${inlineFormat(line.replace(/^###\s+/, ''))}</h4>`);
+      continue;
+    }
+    if (/^##\s+/.test(line)) {
+      closeList();
+      out.push(`<h3 class="text-sm font-extrabold text-white mt-5 mb-2">${inlineFormat(line.replace(/^##\s+/, ''))}</h3>`);
+      continue;
+    }
+
+    // Ordered list  (1. item)
+    if (/^\d+\.\s+/.test(line)) {
+      if (!inOrderedList) { closeList(); out.push('<ol class="list-decimal list-inside space-y-1 ml-2">'); inOrderedList = true; }
+      out.push(`<li class="text-gray-300">${inlineFormat(line.replace(/^\d+\.\s+/, ''))}</li>`);
+      continue;
+    }
+
+    // Unordered list  (- item  or  • item)
+    if (/^[-•]\s+/.test(line)) {
+      if (!inList) { closeList(); out.push('<ul class="space-y-1 ml-2">'); inList = true; }
+      out.push(`<li class="flex gap-2 text-gray-300"><span class="text-blue-500 mt-0.5">▸</span><span>${inlineFormat(line.replace(/^[-•]\s+/, ''))}</span></li>`);
+      continue;
+    }
+
+    // Plain paragraph
+    closeList();
+    out.push(`<p class="text-gray-350 leading-relaxed">${inlineFormat(line)}</p>`);
+  }
+
+  closeList();
+  return out.join('\n');
+}
+
+// Inline formatting: **bold**, `code`, $inline-math$
+function inlineFormat(text: string): string {
+  return text
+    .replace(/\*\*([^*]+)\*\*/g, '<strong class="text-gray-100 font-semibold">$1</strong>')
+    .replace(/`([^`]+)`/g, '<code class="px-1.5 py-0.5 rounded bg-gray-800 text-emerald-400 font-mono text-[10px]">$1</code>')
+    .replace(/\$([^$]+)\$/g, '<code class="px-1.5 py-0.5 rounded bg-blue-950/50 text-blue-300 font-mono text-[10px]">$1</code>');
+}
+// ────────────────────────────────────────────────────────────────────────────
+
 interface CalculatorsHubProps {
   lang: Language;
 }
@@ -264,8 +343,8 @@ export default function CalculatorsHub({ lang }: CalculatorsHubProps) {
                     <h4 className="text-xs font-bold text-white uppercase tracking-wider">Reference Formula &amp; Standards</h4>
                   </div>
                   <div
-                    className="text-xs leading-relaxed font-light space-y-4 text-gray-350"
-                    dangerouslySetInnerHTML={{ __html: activeCalc.explanatoryContent.replace(/\n/g, '<br />') }}
+                    className="text-xs space-y-1"
+                    dangerouslySetInnerHTML={{ __html: renderMarkdown(activeCalc.explanatoryContent) }}
                   />
 
                   <div className="pt-5 border-t border-gray-850/60 space-y-2">
