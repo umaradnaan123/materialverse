@@ -156,7 +156,7 @@ Concrete casting requires an accurate blend of three dry components: cement, san
       weightTons: "Estimated Weight (Tons)",
       weightKg: "Estimated Weight (Kg)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Sand Volume &amp; Weight Estimation</b><br/><br/>Sand is measured in cubic feet (cft) for ordering but billed in tonnes.<br/><br/><b>Key Density Values:</b><br/>• River/M-sand density: ~1600–1700 kg/m³ (≈50 kg per cft)<br/>• 1 tonne of sand ≈ 20 cft (loose volume)<br/><br/><b>Formula:</b><br/>Weight (kg) = Volume (cft) × 50<br/>Weight (tons) = Volume (cft) × 110 lbs ÷ 2000<br/><br/><i>BIS Standard: IS 383 governs fine aggregate specifications for concrete.</i>`
   },
   {
     id: "aggregate-calc",
@@ -179,7 +179,7 @@ Concrete casting requires an accurate blend of three dry components: cement, san
       cft: "Total Aggregate Volume (Cft)",
       weightTons: "Estimated Weight (Tons)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Aggregate (Coarse Gravel) Estimation</b><br/><br/>Gravel or crushed stone is used as coarse aggregate in concrete and as sub-base in roads and floors.<br/><br/><b>Key Values:</b><br/>• Gravel density: ~1680 kg/m³ (~105 lbs per cft)<br/>• 1 tonne gravel ≈ 19 cft<br/><br/><b>Formula:</b><br/>Volume (cft) = Area (sq.ft) × Depth (ft)<br/>Weight (tons) = Volume × 105 ÷ 2000<br/><br/><i>BIS Standard: IS 383 specifies aggregate grading zones.</i>`
   },
   {
     id: "brick-calc",
@@ -273,7 +273,7 @@ Accurate brick count calculation is crucial before ordering truckloads of brick 
       blockCount: "Total Concrete Blocks Required",
       mortarCft: "Mortar Required (Cft)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Concrete Block Wall Estimation</b><br/><br/>Concrete hollow blocks are faster to lay than bricks and offer superior thermal insulation.<br/><br/><b>Standard Block Sizes:</b><br/>• 8×8×16 inch block covers ~0.89 sq.ft wall face<br/>• Mortar consumption: ~0.1 cft per block<br/><br/><b>Formula:</b><br/>Block Count = Wall Area (sq.ft) ÷ 0.89<br/>Mortar (cft) = Block Count × 0.10<br/><br/><i>BIS Standard: IS 2185 covers solid and hollow concrete blocks.</i>`
   },
   {
     id: "steel-calc",
@@ -373,7 +373,7 @@ For a 12mm bar of 50m length:
       bags: "Cement Bags Required (50kg)",
       sandCft: "Sand Quantity (Cft)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Wall Plastering Material Estimation</b><br/><br/>Plastering creates a smooth, durable surface for painting and protects masonry from weathering.<br/><br/><b>Standard Plaster Ratios:</b><br/>• 1:3 – Ceiling (rich mix)<br/>• 1:4 – Internal walls (standard)<br/>• 1:6 – External rough coat<br/><br/><b>Formula:</b><br/>Dry Volume = Area × Thickness × 1.33 (shrinkage factor)<br/>Cement Bags = (1/Sum) × Dry Vol ÷ 1.226<br/><br/><i>BIS Standard: IS 2116 covers sand for masonry mortars.</i>`
   },
   {
     id: "mortar-calc",
@@ -410,7 +410,7 @@ For a 12mm bar of 50m length:
       bags: "Cement Bags (50kg)",
       sandCft: "Sand Volume (Cft)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Dry Mortar Batch Estimation</b><br/><br/>Mortar binds masonry units. Wet mortar volume shrinks 25–33% when dry ingredients are mixed with water.<br/><br/><b>Shrinkage Factor:</b><br/>Dry Volume = Wet Volume × 1.33<br/><br/><b>Proportioning (1:5 ratio):</b><br/>• Cement = 1/6 of dry volume<br/>• Sand = 5/6 of dry volume<br/>• 1 cement bag = 1.226 cft<br/><br/><i>BIS Standard: IS 2250 specifies preparation and use of masonry mortars.</i>`
   },
   {
     id: "foundation-calc",
@@ -442,7 +442,7 @@ For a 12mm bar of 50m length:
       sandCft: "Sand Quantity (Cft)",
       aggregateCft: "Aggregate Quantity (Cft)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Isolated Pad Footing Concrete Estimation</b><br/><br/>Isolated footings distribute column loads to soil. Designed in M15 (1:2:4) grade concrete.<br/><br/><b>Formula:</b><br/>Volume = L × W × D × No. of Footings<br/>Dry Volume = Wet Volume × 1.54<br/>For M15 (1:2:4), sum = 7:<br/>• Cement = (1/7) × Dry Vol ÷ 1.226<br/>• Sand = (2/7) × Dry Vol (cft)<br/>• Aggregate = (4/7) × Dry Vol (cft)<br/><br/><i>BIS Standard: IS 456 governs plain and reinforced concrete design.</i>`
   },
   {
     id: "rcc-slab-calc",
@@ -520,7 +520,7 @@ Roof slabs are constructed using reinforced cement concrete (RCC), where steel r
       volumeCft: "Total Columns Volume (Cft)",
       bags: "Cement Bags Required (50kg)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>RCC Column Concrete Estimation</b><br/><br/>Columns transfer loads from beams/slabs to the foundation. M20 (1:1.5:3) is the standard for columns.<br/><br/><b>Formula:</b><br/>Volume = Height × Width (ft) × Breadth (ft) × No. of Columns<br/>Dry Volume = Wet Volume × 1.54<br/>Cement bags = (1/5.5) × Dry Vol ÷ 1.226<br/><br/><b>Note:</b> Provide minimum 40mm clear cover for main bars in columns.<br/><br/><i>BIS Standard: IS 456 and SP-16 govern column design.</i>`
   },
   {
     id: "beam-calc",
@@ -548,7 +548,7 @@ Roof slabs are constructed using reinforced cement concrete (RCC), where steel r
       volumeCft: "Total Beams Volume (Cft)",
       bags: "Cement Bags Required"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>RCC Beam Concrete Estimation</b><br/><br/>Beams span horizontally between columns to carry floor/roof loads. M20 (1:1.5:3) is the minimum recommended grade.<br/><br/><b>Formula:</b><br/>Volume = Length × Width (ft) × Depth (ft) × No. of Beams<br/>Dry Volume = Wet Vol × 1.54<br/>Cement Bags = (1/5.5) × Dry Vol ÷ 1.226<br/><br/><b>Typical Cross-sections:</b><br/>• Floor beams: 9×12 inches<br/>• Plinth beams: 9×9 inches<br/><br/><i>BIS Standard: IS 456 governs limit state design of beams.</i>`
   },
   {
     id: "tile-calc",
@@ -631,7 +631,7 @@ Tiling layouts require planning for cutting offsets around wall margins, which a
     outputLabels: {
       groutKg: "Grout Required (Kg)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Tile Grout Quantity Estimation</b><br/><br/>Grout fills gaps between tiles preventing water infiltration. Epoxy grout is preferred in wet areas.<br/><br/><b>Formula:</b><br/>Grout (kg) = [(TileLen + TileWid) × JointWidth × TileDepth × 1.8 Density] ÷ (TileLen × TileWid) × Area<br/>• Typical joint width: 2–5 mm<br/><br/><b>Types:</b><br/>• Cement grout: General use (IS 712)<br/>• Epoxy grout: Chemical-resistant for kitchens/bathrooms<br/><br/><i>BIS Standard: IS 712 covers Portland cement for tile jointing.</i>`
   },
   {
     id: "paint-calc",
@@ -707,7 +707,7 @@ A standard room has four walls and a ceiling. Estimating paint quantities requir
       wallArea: "Wall Area (Sq.Ft)",
       rollsRequired: "Standard Wallpaper Rolls (21\" x 33')"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Wallpaper Roll Estimation</b><br/><br/>A standard roll is 21 inches wide × 33 feet long (~57 sq.ft gross). After pattern matching, effective yield is ~50 sq.ft.<br/><br/><b>Formula:</b><br/>Net Wall Area = Wall Width × Wall Height<br/>Rolls Required = Area ÷ 50<br/><br/><b>Tips:</b><br/>• Add 10% for pattern repeats<br/>• Buy from same print batch<br/>• Non-woven wallpaper is easiest for DIY<br/><br/><i>ASTM F793 governs wallpaper performance standards.</i>`
   },
   {
     id: "flooring-calc",
@@ -732,7 +732,7 @@ A standard room has four walls and a ceiling. Estimating paint quantities requir
       netArea: "Net Flooring Area (Sq.Ft)",
       grossArea: "Gross Area with Wastage (Sq.Ft)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Laminate &amp; Wooden Flooring Estimation</b><br/><br/>Wood/laminate flooring boards expand with humidity. Add 10% wastage buffer (15% for diagonal layouts).<br/><br/><b>Formula:</b><br/>Net Floor Area = Length × Width (sq.ft)<br/>Gross Area = Net Area × (1 + Wastage% ÷ 100)<br/><br/><b>Standard Board Coverage:</b><br/>• 1 pack of laminate ≈ 20–25 sq.ft<br/>• Thicknesses available: 3mm/5mm/8mm/12mm<br/><br/><i>BIS Standard: IS 12823 covers pre-laminated particle boards.</i>`
   },
   {
     id: "carpet-calc",
@@ -755,7 +755,7 @@ A standard room has four walls and a ceiling. Estimating paint quantities requir
       sqft: "Total Area (Sq.Ft)",
       sqyd: "Total Area (Sq.Yards)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Carpet Area Estimation</b><br/><br/>Carpets are typically sold by the square yard. Note the difference between carpet area and super built-up area used by real estate developers.<br/><br/><b>Formula:</b><br/>Total Area (sq.ft) = Room Length × Width<br/>Total Area (sq.yd) = sq.ft ÷ 9 (1 sq.yd = 9 sq.ft)<br/><br/><b>Order Tips:</b><br/>• Add 10% for walls and cuts<br/>• Broadloom carpets come in 12ft width rolls<br/>• Check pile direction before installation<br/><br/><i>BIS Standard: IS 6524 covers pile carpets made of wool.</i>`
   },
   {
     id: "roofing-sheet-calc",
@@ -783,7 +783,7 @@ A standard room has four walls and a ceiling. Estimating paint quantities requir
     outputLabels: {
       totalSheets: "Total Roofing Sheets Required (For 10ft sheets)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Metal Roofing Sheet Estimation</b><br/><br/>Metal roofing sheets (GI, Colour Coated, UPVC) are installed with side laps and end laps of minimum 6 inches.<br/><br/><b>Formula:</b><br/>Effective Sheet Width = Nominal Width − 0.5 ft (overlap)<br/>Sheets per Row = Ridge Length ÷ Effective Width<br/>Total Sheets = Rows × Sheets per Row<br/><br/><i>BIS Standard: IS 277 covers galvanized steel sheets; IS 2379 covers UPVC panels.</i>`
   },
   {
     id: "shingle-calc",
@@ -805,7 +805,7 @@ A standard room has four walls and a ceiling. Estimating paint quantities requir
       squares: "Roof Squares (100 Sq.Ft)",
       bundlesNeeded: "Shingle Bundles Required (includes 10% wastage)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Asphalt Shingle Bundle Estimation</b><br/><br/>Asphalt shingles are measured in "squares" — 1 roofing square = 100 sq.ft of finished roof area.<br/><br/><b>Formula:</b><br/>Squares = Roof Area (sq.ft) ÷ 100<br/>Bundles = Squares × 3 (3-tab shingles: 3 bundles per square)<br/>With 10% Wastage: Bundles × 1.10<br/><br/><b>Types:</b><br/>• 3-Tab: Budget, flat appearance<br/>• Architectural: Dimensional look, longer warranty<br/><br/><i>ASTM D3462 governs asphalt shingle performance.</i>`
   },
   {
     id: "roof-area-calc",
@@ -840,7 +840,7 @@ A standard room has four walls and a ceiling. Estimating paint quantities requir
       footprintArea: "Flat Building Footprint (Sq.Ft)",
       actualRoofArea: "Sloped Roof Surface Area (Sq.Ft)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Pitched Roof Surface Area Calculation</b><br/><br/>A pitched roof has more surface area than the flat building footprint. A pitch factor converts footprint to sloped surface.<br/><br/><b>Pitch Factors:</b><br/>• 4/12 pitch → 1.054<br/>• 6/12 pitch → 1.118<br/>• 8/12 pitch → 1.202<br/>• 12/12 pitch → 1.414<br/><br/><b>Formula:</b><br/>Actual Roof Area = Footprint Area × Pitch Factor<br/><br/><i>Consistent with IS 875 (Part 3) – Wind loads on buildings.</i>`
   },
   {
     id: "pipe-length-calc",
@@ -864,7 +864,7 @@ A standard room has four walls and a ceiling. Estimating paint quantities requir
       waterPipeFt: "Estimated Water Supply Pipe (Ft)",
       drainPipeFt: "Estimated Waste/Drainage Pipe (Ft)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Residential Plumbing Pipe Length Estimation</b><br/><br/>Indian residential plumbing uses CPVC or uPVC pipes for hot/cold supply and SWR/PVC for drainage.<br/><br/><b>Thumb Rule:</b><br/>• Water supply per bathroom: ~40 ft<br/>• Water supply per kitchen: ~30 ft<br/>• Drainage per bathroom: ~20 ft<br/>• Drainage per kitchen: ~15 ft<br/><br/><b>Pipe Standards:</b><br/>• CPVC for hot water: IS 15778<br/>• uPVC for cold water: IS 4985<br/>• SWR drain pipes: IS 13592<br/><br/><i>Always add 15% extra for fittings and bends.</i>`
   },
   {
     id: "water-tank-calc",
@@ -888,7 +888,7 @@ A standard room has four walls and a ceiling. Estimating paint quantities requir
       dailyUseLiters: "Total Daily Water Usage (Liters)",
       recommendedCapacityLiters: "Recommended Water Tank Capacity (Liters)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Residential Water Tank Capacity Estimation</b><br/><br/>BIS recommends 135 LPCD (litres per capita per day) for domestic water supply in urban India.<br/><br/><b>Formula:</b><br/>Daily Use (L) = Household Members × 135 LPCD<br/>Tank Capacity = Daily Use × Backup Days<br/><br/><b>Common Tank Sizes:</b><br/>• Sintex plastic tanks: 500L, 750L, 1000L, 2000L<br/>• Underground sump: 5,000–20,000L<br/><br/><i>BIS Standard: IS 12701 covers polyethylene water storage tanks.</i>`
   },
   {
     id: "rainwater-calc",
@@ -912,7 +912,7 @@ A standard room has four walls and a ceiling. Estimating paint quantities requir
     outputLabels: {
       annualPotentialLiters: "Annual Rainwater Harvest Potential (Liters)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Rainwater Harvesting Potential</b><br/><br/>Collecting rooftop runoff reduces potable water demand and recharges groundwater.<br/><br/><b>Formula:</b><br/>Potential (L) = Roof Area (m²) × Rainfall (m) × Runoff Coefficient × Filter Efficiency<br/>• Runoff coefficient for RCC roof ≈ 0.85<br/>• First-flush filter efficiency ≈ 0.90<br/><br/><b>State Mandates:</b> Mandatory in Chennai, Bengaluru, Delhi NCR for plots above 200 sq.m.<br/><br/><i>NBC 2016 and IS 15797 govern rainwater harvesting systems.</i>`
   },
   {
     id: "wire-length-calc",
@@ -934,7 +934,7 @@ A standard room has four walls and a ceiling. Estimating paint quantities requir
       totalMeters: "Total Wire Length (Meters)",
       standardCoils: "Number of standard 90M coils needed"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Electrical Wire Length Estimation</b><br/><br/>Thumb rule: 3–4 meters of wire per sq.ft of built-up area, covering lighting, sockets, and appliance circuits.<br/><br/><b>Formula:</b><br/>Total Wire (m) = Floor Area (sq.ft) × 3.5<br/>Standard coil = 90 meters → Coils = Total Wire ÷ 90<br/><br/><b>Wire Types Required:</b><br/>• 1.5 sq.mm – Lighting circuits<br/>• 2.5 sq.mm – Power sockets<br/>• 4 sq.mm – AC/geyser<br/><br/><i>BIS Standard: IS 694 covers PVC insulated cables for house wiring.</i>`
   },
   {
     id: "load-calc",
@@ -962,7 +962,7 @@ A standard room has four walls and a ceiling. Estimating paint quantities requir
       totalKW: "Calculated Peak Connected Load (kW)",
       phaseRecommendation: "Electrical Power Feed Recommendation"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Home Electrical Load Calculation</b><br/><br/>Calculate sanctioned load based on connected appliances before applying for a power connection.<br/><br/><b>Typical Wattages:</b><br/>• 1.5 Ton AC: ~1800W<br/>• Electric Geyser: ~2000W<br/>• Refrigerator: ~200W, Washing Machine: ~500W<br/>• Ceiling fan: 50–75W, LED light: 7–15W<br/><br/><b>Phase Selection:</b><br/>• Up to 7 kW → Single-phase (230V)<br/>• Above 7 kW → Three-phase (415V)<br/><br/><i>CEA Regulations 2010 and IS 732 govern residential electrical installations.</i>`
   },
   {
     id: "generator-calc",
@@ -982,7 +982,7 @@ A standard room has four walls and a ceiling. Estimating paint quantities requir
     outputLabels: {
       generatorKva: "Recommended Generator Capacity (kVA)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Backup Generator Sizing</b><br/><br/>Generators are rated in kVA. The relationship to kW depends on power factor.<br/><br/><b>Formula:</b><br/>kVA = (Load kW ÷ Power Factor 0.8) × Safety Multiplier 1.25<br/><br/><b>Common Sizes:</b><br/>• 5 kVA – Small apartments/shops<br/>• 10 kVA – Medium residences<br/>• 25–50 kVA – Commercial/offices<br/><br/><i>BIS Standard: IS 10000 governs diesel generating sets.</i>`
   },
   {
     id: "solar-calc",
@@ -1042,7 +1042,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
     outputLabels: {
       batteryAh: "Required Battery Capacity (Ah)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Battery Backup Calculator</b><br/><br/>Calculate Ampere-hour (Ah) capacity required for home inverter battery storage.<br/><br/><b>Category:</b> Electrical<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "led-lighting-calc",
@@ -1080,7 +1080,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
       totalLumens: "Total Lumens Required (lm)",
       bulbsNeeded: "Recommended 9W LED Bulbs (800 lm each)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>roomType</b><br/><br/>Determine the number of LED light sources needed for a room based on lux levels.<br/><br/><b>Category:</b> Electrical<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "fertilizer-calc",
@@ -1123,7 +1123,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
       dapKg: "DAP Bags Required (Kg)",
       mopKg: "MOP Bags Required (Kg)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Agricultural Fertilizer Calculator</b><br/><br/>Determine exact quantities of Urea, DAP, and MOP required for farm crops.<br/><br/><b>Category:</b> Agricultural<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "seed-calc",
@@ -1146,7 +1146,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
     outputLabels: {
       totalSeedsNeeded: "Total Seeds Required for Sowing"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Seed Sowing Rate Estimator</b><br/><br/>Determine seed quantities needed based on target plant populations.<br/><br/><b>Category:</b> Agricultural<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "irrigation-calc",
@@ -1169,7 +1169,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
     outputLabels: {
       dailyWaterLiters: "Daily Water Volume Required (Liters)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Irrigation Water Requirement Calculator</b><br/><br/>Calculate water requirements in liters for crop fields based on evapotranspiration rates.<br/><br/><b>Category:</b> Agricultural<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "pesticide-calc",
@@ -1190,7 +1190,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
     outputLabels: {
       concentrateMl: "Pesticide Concentrate Needed (ml per tank)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Pesticide Spray Mixing Calculator</b><br/><br/>Calculate volume of pesticide concentrate needed for agricultural sprays.<br/><br/><b>Category:</b> Agricultural<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "fabric-length-calc",
@@ -1220,7 +1220,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
     outputLabels: {
       fabricMeters: "Recommended Fabric Length (Meters)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>garment</b><br/><br/>Estimate fabric yards/meters needed to stitch specific garments.<br/><br/><b>Category:</b> Fabric & Textile<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "thread-converter",
@@ -1243,7 +1243,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
     outputLabels: {
       threadCountPerInch: "Total Thread Count (per Sq.Inch)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Thread Count Converter</b><br/><br/>Convert yarn sizes and threads per cm to threads per inch metrics.<br/><br/><b>Category:</b> Fabric & Textile<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "gsm-calc",
@@ -1268,7 +1268,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
     outputLabels: {
       gsm: "Fabric Weight (GSM)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Fabric GSM Calculator</b><br/><br/>Determine fabric weight in Grams per Square Meter (GSM).<br/><br/><b>Category:</b> Fabric & Textile<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "curtain-calc",
@@ -1292,7 +1292,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
       curtainPanels: "Curtain Panels Required",
       fabricYards: "Total Fabric Required (Yards)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Curtain Fabric Estimator</b><br/><br/>Calculate curtain fabric panels and yardage for custom windows.<br/><br/><b>Category:</b> Fabric & Textile<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "upholstery-calc",
@@ -1321,7 +1321,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
     outputLabels: {
       fabricYards: "Estimated Upholstery Fabric Required (Yards)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>sofaSize</b><br/><br/>Determine yards of fabric needed to re-upholster chairs or sofas.<br/><br/><b>Category:</b> Fabric & Textile<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "wallpaper-repeat-calc",
@@ -1343,7 +1343,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
     outputLabels: {
       rollsRequired: "Required Wallpaper Rolls (includes repeat wastage)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Wallpaper Repeat Allowance Estimator</b><br/><br/>Calculate wallpaper roll requirements factoring pattern repeats.<br/><br/><b>Category:</b> Home Improvement<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "insulation-calc",
@@ -1373,7 +1373,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
     outputLabels: {
       totalInsulationRolls: "Total Insulation Rolls Required"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>thickness</b><br/><br/>Determine the number of fiberglass batts or rolls for insulation projects.<br/><br/><b>Category:</b> Home Improvement<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "glass-area-calc",
@@ -1401,7 +1401,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
       glazingAreaSqft: "Total Glazing Area (Sq.Ft)",
       totalGlassWeightKg: "Total Glass Weight (Kg)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Glass Area & Weight Calculator</b><br/><br/>Determine total window glass glazing area and weight load.<br/><br/><b>Category:</b> Home Improvement<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "door-material-calc",
@@ -1428,7 +1428,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
       frameTimberCft: "Required Frame Timber Volume (Cft)",
       doorShutterAreaSqft: "Door Shutter Surface Area (Sq.Ft)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Door Wood & Shutter Calculator</b><br/><br/>Estimate timber volumes or sheet areas required for flush/panel doors.<br/><br/><b>Category:</b> Home Improvement<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "window-material-calc",
@@ -1451,7 +1451,7 @@ Installing solar panels helps reduce grid power dependence and lower monthly car
       frameProfileRunningFeet: "Required Frame Section (Running Feet)",
       glassPaneAreaSqft: "Glazing Glass Pane Area (Sq.Ft)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Window Frame & Section Calculator</b><br/><br/>Estimate frame profiles and glass panes requirements for custom windows.<br/><br/><b>Category:</b> Home Improvement<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "construction-cost-calc",
@@ -1538,7 +1538,7 @@ In civil engineering projects, the total cost is divided among materials and lab
       finishingBudget: "Finishing & Tiling Budget (35%)",
       utilitiesBudget: "Plumbing & Electricals Budget (20%)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Material Budget Planner</b><br/><br/>Plan and allocate budget segments for your material purchasing schedule.<br/><br/><b>Category:</b> Cost Estimation<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "renovation-calc",
@@ -1560,7 +1560,7 @@ In civil engineering projects, the total cost is divided among materials and lab
     outputLabels: {
       budgetRange: "Estimated Renovation Budget Range"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Home Renovation Cost Calculator</b><br/><br/>Determine budget needs for complete home remodeling or floor renovations.<br/><br/><b>Category:</b> Cost Estimation<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "interior-cost-calc",
@@ -1592,7 +1592,7 @@ In civil engineering projects, the total cost is divided among materials and lab
     outputLabels: {
       interiorCostRange: "Estimated Interior Cost Range"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>bhk</b><br/><br/>Calculate complete woodwork, wardrobe, and styling budgets.<br/><br/><b>Category:</b> Cost Estimation<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "room-remodel-calc",
@@ -1615,7 +1615,7 @@ In civil engineering projects, the total cost is divided among materials and lab
       estimatedCost: "Remodeling Budget Estimate",
       timelineDays: "Expected Working Timeline"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Room Remodeling Cost & Timeline Planner</b><br/><br/>Estimate costs for remodeling individual bedrooms or kitchens.<br/><br/><b>Category:</b> Cost Estimation<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "area-converter",
@@ -1668,7 +1668,7 @@ In civil engineering projects, the total cost is divided among materials and lab
     outputLabels: {
       convertedValue: "Converted Area Value"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>toUnit</b><br/><br/>Convert between square feet, square meters, square yards, acres, and gunthas.<br/><br/><b>Category:</b> Unit Conversion<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "volume-converter",
@@ -1721,7 +1721,7 @@ In civil engineering projects, the total cost is divided among materials and lab
     outputLabels: {
       convertedVolume: "Converted Volume Value"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>toUnit</b><br/><br/>Convert between cubic meters, cubic feet, liters, and standard construction brass.<br/><br/><b>Category:</b> Unit Conversion<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "weight-converter",
@@ -1772,7 +1772,7 @@ In civil engineering projects, the total cost is divided among materials and lab
     outputLabels: {
       convertedWeight: "Converted Weight Value"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>toUnit</b><br/><br/>Convert weight measurements (kilograms, tons, quintals, and pounds).<br/><br/><b>Category:</b> Unit Conversion<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "length-converter",
@@ -1823,7 +1823,7 @@ In civil engineering projects, the total cost is divided among materials and lab
     outputLabels: {
       convertedLength: "Converted Length Value"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>toUnit</b><br/><br/>Convert lengths between meters, feet, inches, and yards.<br/><br/><b>Category:</b> Unit Conversion<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "construction-unit-converter",
@@ -1844,7 +1844,7 @@ In civil engineering projects, the total cost is divided among materials and lab
       volumeCft: "Equivalent Volume in Cubic Feet (Cft)",
       volumeCum: "Equivalent Volume in Cubic Meters (Cu.M)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Construction Unit Converter</b><br/><br/>Specialized converter for core construction values like bags-to-cft or brass-to-cft.<br/><br/><b>Category:</b> Unit Conversion<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "material-waste-calc",
@@ -1871,7 +1871,7 @@ In civil engineering projects, the total cost is divided among materials and lab
       wastedQty: "Wasted Material Volume (Units)",
       financialLoss: "Wasted Material Cost Loss"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Material Waste Calculator</b><br/><br/>Determine wasted quantities and associated financial loss values.<br/><br/><b>Category:</b> Advanced<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "project-timeline-calc",
@@ -1894,7 +1894,7 @@ In civil engineering projects, the total cost is divided among materials and lab
       estimatedDurationDays: "Expected Work Days Needed",
       estimatedDurationMonths: "Expected Calendar Months"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Project Timeline Estimator</b><br/><br/>Estimate construction phase durations based on crew sizes.<br/><br/><b>Category:</b> Advanced<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "carbon-footprint-calc",
@@ -1917,7 +1917,7 @@ In civil engineering projects, the total cost is divided among materials and lab
       co2Kg: "Total Carbon Emissions (Kg of CO2)",
       co2Tons: "Total Carbon Emissions (Tons of CO2)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Material Carbon Footprint Calculator</b><br/><br/>Estimate carbon dioxide (CO2) footprint generated by your material choices.<br/><br/><b>Category:</b> Advanced<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "material-lifespan-calc",
@@ -1963,7 +1963,7 @@ In civil engineering projects, the total cost is divided among materials and lab
       expectedLifeYears: "Expected Operational Life (Years)",
       maintenanceIntervalYears: "Recommended Maintenance Interval (Years)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>exposure</b><br/><br/>Determine expected material operational spans based on environmental exposure.<br/><br/><b>Category:</b> Advanced<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   },
   {
     id: "roi-solar-calc",
@@ -1989,6 +1989,6 @@ In civil engineering projects, the total cost is divided among materials and lab
       paybackYears: "System Payback Period (Years)",
       tenYearRoiPercent: "Net 10-Year Return on Investment (%)"
     },
-    explanatoryContent: "..."
+    explanatoryContent: `<b>Solar ROI Payback Calculator</b><br/><br/>Calculate Return on Investment (ROI) and payback years for solar installation.<br/><br/><b>Category:</b> Advanced<br/><br/><b>How to Use:</b><br/>1. Enter your values in the input fields on the left panel.<br/>2. Click "Run Real-time Calculation" to generate estimates.<br/>3. Results are based on standard engineering formulas and IS codes.<br/><br/><b>Note:</b> All calculations are approximate estimates for planning and budgeting. Consult a licensed engineer before placing bulk material orders.<br/><br/><i>Results are approximate estimates intended for planning and budgeting purposes only.</i>`
   }
 ];
