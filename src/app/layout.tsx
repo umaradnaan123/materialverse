@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   title: "Materialpedia - The Encyclopedia of Materials",
   description: "Wikipedia for Materials. Find standards, lifespans, price estimates, durability ratings, environmental impact, calculators, and comparison matrices for 60+ material categories.",
   manifest: "/manifest.json",
+  verification: {
+    google: "3HnqK-VdYSw0Gvki7SZizE2J_mdws5GCxxGC8AmkTgA",
+    other: {
+      "msvalidate.01": "09C7A42C92C510395B16F0393F057D6C",
+      "yandex-verification": "8d0d5adc59a12b92",
+    },
+  },
 };
 
 export const viewport: Viewport = {
