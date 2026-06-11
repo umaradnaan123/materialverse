@@ -211,58 +211,75 @@ export default function CalculatorsHub({ lang }: CalculatorsHubProps) {
                   </button>
                 </form>
 
-                {/* Outputs with AnimatePresence */}
+              </div>
+
+              {/* Right Panel: Estimations + Reference */}
+              <div className="lg:col-span-3 space-y-6">
+
+                {/* Calculation Estimations — shown above Reference */}
                 <AnimatePresence mode="wait">
-                  {outputsState && (
-                    <motion.div 
-                      initial={{ opacity: 0, y: 15 }}
+                  {outputsState ? (
+                    <motion.div
+                      key="outputs"
+                      initial={{ opacity: 0, y: -12 }}
                       animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 15 }}
-                      className="glass-panel rounded-3xl p-6 border border-emerald-500/10 bg-emerald-950/5 space-y-4 shadow-xl"
+                      exit={{ opacity: 0, y: -12 }}
+                      transition={{ type: 'spring' as const, stiffness: 300, damping: 28 }}
+                      className="glass-panel rounded-3xl p-6 border border-emerald-500/15 bg-emerald-950/5 space-y-4 shadow-xl"
                     >
-                      <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-400 flex items-center gap-2 border-b border-emerald-900/20 pb-2">
+                      <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-400 flex items-center gap-2 border-b border-emerald-900/20 pb-3">
                         <Sparkles className="w-4 h-4" />
                         <span>Calculation Estimations</span>
                       </h4>
-                      <div className="space-y-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {Object.entries(outputsState).map(([key, val]) => (
-                          <div key={key} className="space-y-1 bg-gray-900/60 p-3.5 rounded-2xl border border-gray-850 shadow-inner">
-                            <span className="text-[10px] text-gray-500 font-bold uppercase tracking-wider">
+                          <div key={key} className="space-y-1 bg-gray-900/60 p-4 rounded-2xl border border-gray-800 shadow-inner">
+                            <span className="text-[10px] text-gray-500 font-bold uppercase tracking-wider block">
                               {activeCalc.outputLabels[key] || key}
                             </span>
-                            <div className="text-xl font-bold text-white tracking-tight">
+                            <div className="text-2xl font-extrabold text-white tracking-tight">
                               <CountUpValue value={val} />
                             </div>
                           </div>
                         ))}
                       </div>
                     </motion.div>
+                  ) : (
+                    <motion.div
+                      key="outputs-placeholder"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className="glass-panel rounded-3xl p-6 border border-dashed border-gray-800 flex flex-col items-center justify-center gap-3 min-h-[120px]"
+                    >
+                      <Sparkles className="w-6 h-6 text-gray-700" />
+                      <p className="text-xs text-gray-600 font-medium text-center">Fill in the inputs and click<br/><span className="text-gray-500">Run Real-time Calculation</span> to see results here.</p>
+                    </motion.div>
                   )}
                 </AnimatePresence>
-              </div>
 
-              {/* Right Guide Content */}
-              <div className="lg:col-span-3 glass-panel rounded-3xl p-6 md:p-8 border border-white/5 space-y-5 prose prose-invert max-w-none text-gray-300 shadow-2xl">
-                <div className="flex items-center gap-2 text-blue-450 pb-2 border-b border-gray-850">
-                  <Info className="w-5 h-5" />
-                  <h4 className="text-xs font-bold text-white uppercase tracking-wider">Reference Formula & Standards</h4>
-                </div>
-                <div 
-                  className="text-xs leading-relaxed font-light space-y-4 text-gray-350"
-                  dangerouslySetInnerHTML={{ __html: activeCalc.explanatoryContent.replace(/\n/g, '<br />') }}
-                >
-                </div>
+                {/* Reference Formula & Standards */}
+                <div className="glass-panel rounded-3xl p-6 md:p-8 border border-white/5 space-y-5 prose prose-invert max-w-none text-gray-300 shadow-2xl">
+                  <div className="flex items-center gap-2 text-blue-450 pb-2 border-b border-gray-850">
+                    <Info className="w-5 h-5" />
+                    <h4 className="text-xs font-bold text-white uppercase tracking-wider">Reference Formula &amp; Standards</h4>
+                  </div>
+                  <div
+                    className="text-xs leading-relaxed font-light space-y-4 text-gray-350"
+                    dangerouslySetInnerHTML={{ __html: activeCalc.explanatoryContent.replace(/\n/g, '<br />') }}
+                  />
 
-                <div className="pt-6 border-t border-gray-850/60 space-y-2">
-                  <span className="text-[9px] font-bold text-gray-500 uppercase tracking-widest block">Indexed SEO Keywords</span>
-                  <div className="flex flex-wrap gap-1.5">
-                    {activeCalc.seoKeywords.map((kw, idx) => (
-                      <span key={idx} className="text-[9px] font-medium px-2.5 py-0.5 rounded-full bg-gray-900 text-gray-400 border border-gray-800">
-                        {kw}
-                      </span>
-                    ))}
+                  <div className="pt-5 border-t border-gray-850/60 space-y-2">
+                    <span className="text-[9px] font-bold text-gray-500 uppercase tracking-widest block">Indexed SEO Keywords</span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {activeCalc.seoKeywords.map((kw, idx) => (
+                        <span key={idx} className="text-[9px] font-medium px-2.5 py-0.5 rounded-full bg-gray-900 text-gray-400 border border-gray-800">
+                          {kw}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
+
               </div>
 
             </div>
