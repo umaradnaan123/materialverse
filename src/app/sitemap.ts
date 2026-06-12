@@ -5,7 +5,7 @@ import { materialsData } from '../data/materialsData';
 import { brandsData } from '../data/brandsData';
 import { articlesData } from '../data/articlesData';
 
-const BASE_URL = 'https://materialverse.in';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://materialverse.vercel.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const today = new Date();
