@@ -388,6 +388,18 @@ export default function CalculatorsHub({ lang }: CalculatorsHubProps) {
               <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base font-light">
                 Calculate raw materials quantities, estimate construction costs, configure setups, and evaluate energy savings in seconds.
               </p>
+              <div className="pt-2 flex justify-center">
+                <motion.a
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  href="https://www.effectivecpmnetwork.com/b2r8r4vba?key=c509707241dc8f425cdd67fe12b30e63"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-emerald-600/15"
+                >
+                  Check Features
+                </motion.a>
+              </div>
             </motion.div>
 
             {/* Controls */}

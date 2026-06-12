@@ -175,6 +175,16 @@ export default function Dashboard({
             >
               Use Calculators
             </motion.a>
+            <motion.a
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              href="https://www.effectivecpmnetwork.com/cy6kqza0?key=da63ef5ed9dd1f39cf2d3a87de42e253"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-emerald-600/15"
+            >
+              Check Features
+            </motion.a>
           </div>
 
           {/* Scroll Down Indicator */}

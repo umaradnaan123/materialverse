@@ -133,6 +133,18 @@ export default function PriceIntelligence({ lang }: PriceIntelligenceProps) {
         <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base font-light">
           Track real-time regional variations, price ranges, averages, and trend vectors across materials with automated count-up analysis.
         </p>
+        <div className="pt-2 flex justify-center">
+          <motion.a
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            href="https://www.effectivecpmnetwork.com/y64k0hg8e?key=b6e031570e1ac4dcce264194b1bf0101"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-emerald-600/15"
+          >
+            Check Features
+          </motion.a>
+        </div>
       </motion.div>
 
       {/* Control Panel */}

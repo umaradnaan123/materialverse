@@ -131,6 +131,18 @@ export default function RecommendationEngine({ lang, onSelectMaterial }: Recomme
         <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base font-light">
           What are you building today? Find the ideal materials, grade certifications, checklists, and calculators based on industry-standard engineering parameters.
         </p>
+        <div className="pt-2 flex justify-center">
+          <motion.a
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            href="https://www.effectivecpmnetwork.com/r1w8jwtc?key=d90e40c314b49478cb2f5496e9288c01"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-500 hover:from-blue-500 hover:to-indigo-400 text-white font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-blue-600/15"
+          >
+            Check Features
+          </motion.a>
+        </div>
       </motion.div>
 
       <AnimatePresence mode="wait">
