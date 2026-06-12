@@ -43,6 +43,9 @@ export default function Home() {
     setMounted(true);
     const handleHashChange = () => {
       const hash = window.location.hash;
+      if (!hash.startsWith('#/brand') && hash !== '#/brands') {
+        setPreselectedBrandCategory('All');
+      }
       if (hash.startsWith('#/material/')) {
         const id = hash.replace('#/material/', '');
         setSelectedMaterialId(id);
