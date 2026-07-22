@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Article, articlesData } from '../data/articlesData';
 import { 
   FileText, ArrowLeft, ChevronRight, BookOpen, Clock, 
@@ -387,49 +388,49 @@ export default function EducationalGuides({
             {filteredArticles.map((art) => {
               const isBookmarked = bookmarkedArticles.includes(art.id);
               return (
-                <div
-                  key={art.id}
-                  onClick={() => onSelectArticle(art.id)}
-                  className="glass-panel glass-panel-hover rounded-2xl p-6 border border-white/5 cursor-pointer flex flex-col justify-between group/guide relative"
-                >
-                  <div className="space-y-3">
-                    <div className="flex justify-between items-center text-[10px] text-gray-450">
-                      <span className="px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 font-semibold">
-                        {art.category}
-                      </span>
-                      <div className="flex items-center gap-2" onClick={(e) => e.stopPropagation()}>
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5" />
-                          <span>{art.readingTime}</span>
+                <Link key={art.id} href={`/guide/${art.id}`} className="block">
+                  <div
+                    className="glass-panel glass-panel-hover rounded-2xl p-6 border border-white/5 cursor-pointer flex flex-col justify-between group/guide relative h-full"
+                  >
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center text-[10px] text-gray-455 bg-transparent">
+                        <span className="px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 font-semibold">
+                          {art.category}
+                        </span>
+                        <div className="flex items-center gap-2" onClick={(e) => e.stopPropagation()}>
+                          <div className="flex items-center gap-1">
+                            <Clock className="w-3.5 h-3.5" />
+                            <span>{art.readingTime}</span>
+                          </div>
+                          <button
+                            onClick={(e) => toggleBookmark(art.id, e)}
+                            className={`p-1 rounded border transition-all ${
+                              isBookmarked
+                                ? 'bg-amber-500/10 border-amber-500/20 text-amber-400'
+                                : 'bg-gray-800/40 border-gray-700/50 text-gray-500 hover:text-white'
+                            }`}
+                            title="Bookmark Guide"
+                          >
+                            <Bookmark className="w-3 h-3" />
+                          </button>
                         </div>
-                        <button
-                          onClick={(e) => toggleBookmark(art.id, e)}
-                          className={`p-1 rounded border transition-all ${
-                            isBookmarked
-                              ? 'bg-amber-500/10 border-amber-500/20 text-amber-400'
-                              : 'bg-gray-800/40 border-gray-700/50 text-gray-500 hover:text-white'
-                          }`}
-                          title="Bookmark Guide"
-                        >
-                          <Bookmark className="w-3 h-3" />
-                        </button>
                       </div>
+
+                      <h4 className="font-bold text-white group-hover/guide:text-blue-400 transition-colors text-base line-clamp-2">
+                        {art.title}
+                      </h4>
+                      
+                      <p className="text-xs text-gray-400 line-clamp-2 leading-relaxed font-light">
+                        {art.description}
+                      </p>
                     </div>
 
-                    <h4 className="font-bold text-white group-hover/guide:text-blue-400 transition-colors text-base line-clamp-2">
-                      {art.title}
-                    </h4>
-                    
-                    <p className="text-xs text-gray-400 line-clamp-2 leading-relaxed font-light">
-                      {art.description}
-                    </p>
+                    <div className="flex items-center justify-end text-[10px] text-blue-400 font-semibold group-hover/guide:translate-x-1 transition-transform border-t border-gray-850/60 pt-4 mt-6">
+                      <span>Read Guide</span>
+                      <ChevronRight className="w-3.5 h-3.5 ml-1" />
+                    </div>
                   </div>
-
-                  <div className="flex items-center justify-end text-[10px] text-blue-400 font-semibold group-hover/guide:translate-x-1 transition-transform border-t border-gray-850/60 pt-4 mt-6">
-                    <span>Read Guide</span>
-                    <ChevronRight className="w-3.5 h-3.5 ml-1" />
-                  </div>
-                </div>
+                </Link>
               );
             })}
 

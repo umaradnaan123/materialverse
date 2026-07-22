@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Brand, brandsData } from '../data/brandsData';
 import { materialsData } from '../data/materialsData';
 import { 
@@ -725,86 +726,86 @@ export default function BrandDirectory({
                   const isBookmarked = bookmarkedBrands.includes(brand.id);
                   const isComparing = compareBrandIds.includes(brand.id);
                   return (
-                    <motion.div
-                      key={brand.id}
-                      layout
-                      variants={itemVariants}
-                      exit={{ opacity: 0, scale: 0.95 }}
-                      onClick={() => onSelectBrand(brand.id)}
-                      whileHover={{ 
-                        y: -4, 
-                        borderColor: 'rgba(255,255,255,0.12)',
-                        boxShadow: '0 10px 30px -10px rgba(0,0,0,0.4)' 
-                      }}
-                      className="glass-panel rounded-2xl p-6 border border-white/5 cursor-pointer flex flex-col justify-between group/brand relative shadow-md"
-                    >
-                      <div className="space-y-4">
-                        <div className="flex justify-between items-start">
-                          <div className="text-3.5xl p-2 bg-gray-900/50 rounded-xl border border-gray-800 w-13 h-13 flex items-center justify-center shadow-inner">
-                            {brand.logo}
+                    <Link key={brand.id} href={`/brand/${brand.id}`} className="block">
+                      <motion.div
+                        layout
+                        variants={itemVariants}
+                        exit={{ opacity: 0, scale: 0.95 }}
+                        whileHover={{ 
+                          y: -4, 
+                          borderColor: 'rgba(255,255,255,0.12)',
+                          boxShadow: '0 10px 30px -10px rgba(0,0,0,0.4)' 
+                        }}
+                        className="glass-panel rounded-2xl p-6 border border-white/5 cursor-pointer flex flex-col justify-between group/brand relative shadow-md h-full"
+                      >
+                        <div className="space-y-4">
+                          <div className="flex justify-between items-start">
+                            <div className="text-3.5xl p-2 bg-gray-900/50 rounded-xl border border-gray-800 w-13 h-13 flex items-center justify-center shadow-inner">
+                              {brand.logo}
+                            </div>
+                            
+                            {/* Card action controls */}
+                            <div className="flex gap-2" onClick={(e) => e.stopPropagation()}>
+                              <button
+                                onClick={(e) => handleToggleCompare(brand.id, e)}
+                                className={`p-1.5 rounded-lg border transition-all ${
+                                  isComparing
+                                    ? 'bg-blue-500/10 border-blue-500/30 text-blue-400'
+                                    : 'bg-gray-900 border-gray-800 text-gray-450 hover:text-white'
+                                }`}
+                                title="Compare Brand"
+                              >
+                                <Scale className="w-3.5 h-3.5" />
+                              </button>
+                              <button
+                                onClick={(e) => toggleBookmark(brand.id, e)}
+                                className={`p-1.5 rounded-lg border transition-all ${
+                                  isBookmarked
+                                    ? 'bg-amber-500/10 border-amber-500/30 text-amber-400'
+                                    : 'bg-gray-900 border-gray-800 text-gray-450 hover:text-white'
+                                }`}
+                                title="Bookmark Brand"
+                              >
+                                <Bookmark className="w-3.5 h-3.5" />
+                              </button>
+                            </div>
                           </div>
-                          
-                          {/* Card action controls */}
-                          <div className="flex gap-2" onClick={(e) => e.stopPropagation()}>
-                            <button
-                              onClick={(e) => handleToggleCompare(brand.id, e)}
-                              className={`p-1.5 rounded-lg border transition-all ${
-                                isComparing
-                                  ? 'bg-blue-500/10 border-blue-500/30 text-blue-400'
-                                  : 'bg-gray-900 border-gray-800 text-gray-450 hover:text-white'
-                              }`}
-                              title="Compare Brand"
-                            >
-                              <Scale className="w-3.5 h-3.5" />
-                            </button>
-                            <button
-                              onClick={(e) => toggleBookmark(brand.id, e)}
-                              className={`p-1.5 rounded-lg border transition-all ${
-                                isBookmarked
-                                  ? 'bg-amber-500/10 border-amber-500/30 text-amber-400'
-                                  : 'bg-gray-900 border-gray-800 text-gray-450 hover:text-white'
-                              }`}
-                              title="Bookmark Brand"
-                            >
-                              <Bookmark className="w-3.5 h-3.5" />
-                            </button>
+
+                          <div className="space-y-1">
+                            <h4 className="font-extrabold text-white group-hover/brand:text-blue-400 transition-colors text-base tracking-tight">
+                              {brand.name}
+                            </h4>
+                            <div className="flex items-center gap-2 text-[10px]">
+                              <span className="text-gray-400 font-light">{brand.origin}</span>
+                              <span className="text-gray-750 font-light">•</span>
+                              <span className="text-emerald-400 font-bold">{brand.priceSegment}</span>
+                            </div>
+                          </div>
+
+                          <p className="text-xs text-gray-400 line-clamp-2 leading-relaxed font-light">
+                            {brand.description}
+                          </p>
+
+                          <div className="flex flex-wrap gap-1">
+                            {brand.certifications.slice(0, 3).map((cert, idx) => (
+                              <span key={idx} className="text-[8px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-300 border border-blue-500/20 font-bold">
+                                {cert}
+                              </span>
+                            ))}
+                          </div>
+
+                          <div className="text-[10px] text-gray-400 space-y-1.5 pt-2 font-light border-t border-gray-900 mt-2">
+                            <div className="truncate"><strong className="text-gray-300 font-semibold">Key Products:</strong> {brand.products.slice(0, 2).join(', ')}</div>
+                            <div className="truncate"><strong className="text-gray-300 font-semibold">Applications:</strong> {brand.applications.slice(0, 2).join(', ')}</div>
                           </div>
                         </div>
 
-                        <div className="space-y-1">
-                          <h4 className="font-extrabold text-white group-hover/brand:text-blue-400 transition-colors text-base tracking-tight">
-                            {brand.name}
-                          </h4>
-                          <div className="flex items-center gap-2 text-[10px]">
-                            <span className="text-gray-400 font-light">{brand.origin}</span>
-                            <span className="text-gray-750 font-light">•</span>
-                            <span className="text-emerald-400 font-bold">{brand.priceSegment}</span>
-                          </div>
+                        <div className="flex items-center justify-end text-[10px] text-blue-400 font-bold group-hover/brand:translate-x-1.5 transition-transform border-t border-gray-905 pt-4 mt-5">
+                          <span>Brand Specifications Profile</span>
+                          <ArrowRight className="w-3 h-3 ml-1" />
                         </div>
-
-                        <p className="text-xs text-gray-400 line-clamp-2 leading-relaxed font-light">
-                          {brand.description}
-                        </p>
-
-                        <div className="flex flex-wrap gap-1">
-                          {brand.certifications.slice(0, 3).map((cert, idx) => (
-                            <span key={idx} className="text-[8px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-300 border border-blue-500/20 font-bold">
-                              {cert}
-                            </span>
-                          ))}
-                        </div>
-
-                        <div className="text-[10px] text-gray-400 space-y-1.5 pt-2 font-light border-t border-gray-900 mt-2">
-                          <div className="truncate"><strong className="text-gray-300 font-semibold">Key Products:</strong> {brand.products.slice(0, 2).join(', ')}</div>
-                          <div className="truncate"><strong className="text-gray-300 font-semibold">Applications:</strong> {brand.applications.slice(0, 2).join(', ')}</div>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center justify-end text-[10px] text-blue-400 font-bold group-hover/brand:translate-x-1.5 transition-transform border-t border-gray-905 pt-4 mt-5">
-                        <span>Brand Specifications Profile</span>
-                        <ArrowRight className="w-3 h-3 ml-1" />
-                      </div>
-                    </motion.div>
+                      </motion.div>
+                    </Link>
                   );
                 })}
               </AnimatePresence>
