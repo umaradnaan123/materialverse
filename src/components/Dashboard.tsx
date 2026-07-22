@@ -394,9 +394,9 @@ export default function Dashboard({
                   </div>
 
                   <div className="space-y-1">
-                    <h4 className="font-extrabold text-white text-lg tracking-tight group-hover:text-blue-400 transition-colors leading-tight">
+                    <h3 className="font-extrabold text-white text-lg tracking-tight group-hover:text-blue-400 transition-colors leading-tight">
                       {item.title}
-                    </h4>
+                    </h3>
                     <div className="text-[10px] text-blue-300 font-mono font-bold">
                       {item.standards}
                     </div>

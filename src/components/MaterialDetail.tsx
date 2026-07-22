@@ -212,9 +212,9 @@ export default function MaterialDetail({
               Group: {material.group}
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-none">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-none">
             {material.name}
-          </h2>
+          </h1>
           <p className="text-gray-300 text-sm md:text-base leading-relaxed font-light">
             {material.description}
           </p>

@@ -124,10 +124,10 @@ export default function RecommendationEngine({ lang, onSelectMaterial }: Recomme
           <Sparkles className="w-3.5 h-3.5" />
           <span>Smart Decision Matrix</span>
         </div>
-        <h2 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-250 to-gray-400 flex items-center justify-center gap-3">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-250 to-gray-400 flex items-center justify-center gap-3">
           <Compass className="text-blue-500 w-9 h-9 animate-pulse" />
           <span>Interactive Recommendations</span>
-        </h2>
+        </h1>
         <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base font-light">
           What are you building today? Find the ideal materials, grade certifications, checklists, and calculators based on industry-standard engineering parameters.
         </p>
@@ -193,9 +193,9 @@ export default function RecommendationEngine({ lang, onSelectMaterial }: Recomme
                       {activeScenario.icon}
                     </div>
                     <div>
-                      <h3 className="text-2xl font-extrabold text-white tracking-tight leading-tight">
+                      <h1 className="text-2xl font-extrabold text-white tracking-tight leading-tight">
                         {activeScenario.title}
-                      </h3>
+                      </h1>
                       <p className="text-xs text-gray-400 mt-1 font-light">{activeScenario.category} Solution</p>
                     </div>
                   </div>

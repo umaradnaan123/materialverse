@@ -301,7 +301,7 @@ export default function BrandDirectory({
                   </div>
 
                   <div className="space-y-1.5">
-                    <h3 className="text-2xl font-extrabold text-white tracking-tight">{activeBrand.name}</h3>
+                    <h1 className="text-2xl font-extrabold text-white tracking-tight">{activeBrand.name}</h1>
                     <div className="flex flex-wrap gap-1.5">
                       {activeBrand.categories.map((cat, idx) => (
                         <span key={idx} className="text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
@@ -492,10 +492,10 @@ export default function BrandDirectory({
                 <Award className="w-3.5 h-3.5" />
                 <span>Verified Compliance Index</span>
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-250 to-gray-400 flex items-center justify-center gap-3">
+              <h1 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-250 to-gray-400 flex items-center justify-center gap-3">
                 <Building className="text-blue-500 w-9 h-9" />
                 <span>Manufacturer Brand Directory</span>
-              </h2>
+              </h1>
               <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base font-light">
                 Instantly audit certified manufacturers, compare ISI/BIS licensing specifications, filter budget segments, and examine brand limitations.
               </p>

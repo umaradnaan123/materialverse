@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const material = materialsData.find((m) => m.id === id);
   if (!material) {
     return {
-      title: "Material Not Found | MaterialVerse",
+      title: "Material Not Found | Materialpedia",
     };
   }
 
-  const title = `${material.name} Properties, Standards & Guides | MaterialVerse`;
+  const title = `${material.name} Properties, Standards & Guides | Materialpedia`;
   const description = `${material.name} standard specifications. Lifespan: ${material.lifespan}, Price: ${material.priceEstimation}. Learn grades, pros/cons, and DIY maintenance guide.`;
 
   return {
@@ -31,12 +31,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `https://materialpedia.org/material/${id}`,
     },
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       title,
       description,
       type: 'article',
       url: `https://materialpedia.org/material/${id}`,
+      siteName: 'Materialpedia',
     },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    }
   };
 }
 
@@ -53,7 +63,7 @@ export default async function Page({ params }: Props) {
   }
 
   // Pre-render JSON-LD Structured Schema for search crawlers
-  const jsonLd = {
+  const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": material.name,
@@ -83,11 +93,40 @@ export default async function Page({ params }: Props) {
     ]
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://materialpedia.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Materials",
+        "item": "https://materialpedia.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": material.name,
+        "item": `https://materialpedia.org/material/${id}`
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <MaterialClientWrapper id={id} />
     </>

@@ -337,10 +337,10 @@ export default function EducationalGuides({
         // --- ARTICLE INDEX LIST VIEW ---
         <div className="space-y-6">
           <div className="text-center space-y-2 py-4">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white flex items-center justify-center gap-3">
+            <h1 className="text-3xl md:text-4xl font-extrabold text-white flex items-center justify-center gap-3">
               <BookOpen className="text-blue-500 w-8 h-8" />
               <span>Material Knowledge & Guides</span>
-            </h2>
+            </h1>
             <p className="text-gray-400 max-w-2xl mx-auto text-sm font-light">
               Read professional articles, structural engineering methodologies, and interior design buying guides.
             </p>

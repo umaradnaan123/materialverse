@@ -1,37 +1,41 @@
-'use client';
-
 import React from 'react';
-import { useRouter } from 'next/navigation';
-import { useApp } from '../../context/AppContext';
-import { materialsData } from '../../data/materialsData';
-import { translations } from '../../data/translations';
-import Dashboard from '../../components/Dashboard';
-import { Bookmark } from 'lucide-react';
+import { Metadata } from 'next';
+import BookmarksClient from './BookmarksClient';
 
-export default function BookmarksPage() {
-  const router = useRouter();
-  const { lang, bookmarks, toggleBookmark, addToCompare } = useApp();
-  const t = translations[lang];
+export const metadata: Metadata = {
+  title: "Bookmarked Materials | Materialpedia",
+  description: "Your saved material profiles, specifications, pricing matrices, and guides.",
+  alternates: {
+    canonical: "https://materialpedia.org/bookmarks",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+  openGraph: {
+    title: "Bookmarked Materials | Materialpedia",
+    description: "Your saved material profiles, specifications, pricing matrices, and guides.",
+    url: "https://materialpedia.org/bookmarks",
+    type: "website",
+  },
+};
 
-  const bookmarkedMats = materialsData.filter((m) => bookmarks.includes(m.id));
+export default function Page() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Bookmarked Materials",
+    "url": "https://materialpedia.org/bookmarks",
+    "description": "User custom bookmarked materials watchlist on Materialpedia."
+  };
 
   return (
-    <div className="space-y-6">
-      <h2 className="text-3xl font-extrabold text-white text-center flex items-center justify-center gap-2">
-        <Bookmark className="w-8 h-8 text-amber-500 fill-amber-500" />
-        <span>{t.bookmarksTab} ({bookmarks.length})</span>
-      </h2>
-      {bookmarkedMats.length > 0 ? (
-        <Dashboard
-          lang={lang}
-          onToggleBookmark={toggleBookmark}
-          bookmarks={bookmarks}
-          onAddToCompare={addToCompare}
-          materials={bookmarkedMats}
-        />
-      ) : (
-        <p className="text-center py-12 text-gray-400">Your bookmarks list is empty.</p>
-      )}
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <BookmarksClient />
+    </>
   );
 }

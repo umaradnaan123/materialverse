@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = articlesData.find((a) => a.id === id);
   if (!article) {
     return {
-      title: "Guide Not Found | MaterialVerse",
+      title: "Guide Not Found | Materialpedia",
     };
   }
 
-  const title = `${article.title} | Educational Guides | MaterialVerse`;
+  const title = `${article.title} | Educational Guides | Materialpedia`;
   const description = article.description;
 
   return {
@@ -32,12 +32,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `https://materialpedia.org/guide/${id}`,
     },
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       title,
       description,
       type: 'article',
       url: `https://materialpedia.org/guide/${id}`,
+      siteName: 'Materialpedia',
     },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    }
   };
 }
 
@@ -54,7 +64,7 @@ export default async function Page({ params }: Props) {
   }
 
   // Article structured JSON-LD schema
-  const jsonLd = {
+  const articleSchema = {
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": article.title,
@@ -70,11 +80,40 @@ export default async function Page({ params }: Props) {
     }
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://materialpedia.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides",
+        "item": "https://materialpedia.org/guides"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": article.title,
+        "item": `https://materialpedia.org/guide/${id}`
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <GuideClientWrapper id={id} />
     </>

@@ -11,9 +11,60 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Materialpedia - The Encyclopedia of Materials",
+  title: {
+    default: "Materialpedia - The Encyclopedia of Materials",
+    template: "%s | Materialpedia"
+  },
   description: "Wikipedia for Materials. Find standards, lifespans, price estimates, durability ratings, environmental impact, calculators, and comparison matrices for 60+ material categories.",
+  applicationName: "Materialpedia",
+  referrer: "origin-when-cross-origin",
+  keywords: ["materials", "construction", "interior finishing", "electrical utilities", "calculators", "compare materials", "BIS standards", "quality standards"],
+  authors: [{ name: "MaterialVerse Team" }],
+  publisher: "MaterialVerse Ltd",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://materialpedia.org"),
+  alternates: {
+    canonical: "/",
+  },
   manifest: "/manifest.json",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "Materialpedia - The Encyclopedia of Materials",
+    description: "Wikipedia for Materials. Find standards, lifespans, price estimates, durability ratings, environmental impact, calculators, and comparison matrices for 60+ material categories.",
+    url: "https://materialpedia.org",
+    siteName: "Materialpedia",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/icon.png",
+        width: 512,
+        height: 512,
+        alt: "Materialpedia logo",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Materialpedia - The Encyclopedia of Materials",
+    description: "Wikipedia for Materials. Find standards, lifespans, price estimates, durability ratings, environmental impact, calculators, and comparison matrices for 60+ material categories.",
+    creator: "@materialpedia",
+    images: ["/icon.png"],
+  },
   verification: {
     google: "3HnqK-VdYSw0Gvki7SZizE2J_mdws5GCxxGC8AmkTgA",
     other: {

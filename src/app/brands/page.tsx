@@ -1,32 +1,41 @@
-'use client';
+import React from 'react';
+import { Metadata } from 'next';
+import BrandsClient from './BrandsClient';
 
-import React, { Suspense } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
-import BrandDirectory from '../../components/BrandDirectory';
-
-function BrandsContent() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const initialCategory = searchParams.get('category') || 'All';
-
-  return (
-    <BrandDirectory
-      selectedBrandId={null}
-      initialCategory={initialCategory}
-      onSelectBrand={(id) => {
-        if (id) {
-          router.push(`/brand/${id}`);
-        }
-      }}
-      onBackToHome={() => router.push('/')}
-    />
-  );
-}
+export const metadata: Metadata = {
+  title: "Certified Brand Directory & Manufacturers | Materialpedia",
+  description: "Browse verified material brand directories, manufacturers, certifications, and compliance licenses across civil construction categories.",
+  alternates: {
+    canonical: "https://materialpedia.org/brands",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Certified Brand Directory & Manufacturers | Materialpedia",
+    description: "Browse verified material brand directories, manufacturers, certifications, and compliance licenses across civil construction categories.",
+    url: "https://materialpedia.org/brands",
+    type: "website",
+  },
+};
 
 export default function Page() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Certified Brand Directory & Manufacturers",
+    "url": "https://materialpedia.org/brands",
+    "description": "Comprehensive directory profiling top quality-certified material manufacturers and license details."
+  };
+
   return (
-    <Suspense fallback={<div className="text-center py-12 text-gray-400">Loading Brand Directory...</div>}>
-      <BrandsContent />
-    </Suspense>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <BrandsClient />
+    </>
   );
 }

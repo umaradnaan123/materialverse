@@ -126,10 +126,10 @@ export default function PriceIntelligence({ lang }: PriceIntelligenceProps) {
           <Sparkles className="w-3.5 h-3.5" />
           <span>Real-time Market Indexes</span>
         </div>
-        <h2 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-250 to-gray-400 flex items-center justify-center gap-3">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-250 to-gray-400 flex items-center justify-center gap-3">
           <BarChart2 className="text-blue-500 w-9 h-9" />
           <span>Material Price Intelligence</span>
-        </h2>
+        </h1>
         <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base font-light">
           Track real-time regional variations, price ranges, averages, and trend vectors across materials with automated count-up analysis.
         </p>

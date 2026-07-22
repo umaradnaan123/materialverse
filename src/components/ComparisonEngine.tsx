@@ -42,10 +42,10 @@ export default function ComparisonEngine({
     <div className="space-y-8 animate-fade-in max-w-6xl mx-auto px-4">
       {/* Title */}
       <div className="text-center space-y-2 py-4">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-white flex items-center justify-center gap-3">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-white flex items-center justify-center gap-3">
           <Scale className="text-blue-500 w-8 h-8" />
           <span>{t.compareTitle}</span>
-        </h2>
+        </h1>
         <p className="text-gray-400 max-w-2xl mx-auto text-sm font-light">
           {t.compareSubtitle}
         </p>

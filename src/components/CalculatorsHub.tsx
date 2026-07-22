@@ -242,7 +242,7 @@ export default function CalculatorsHub({ lang }: CalculatorsHubProps) {
                     <span className="text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
                       {activeCalc.category}
                     </span>
-                    <h3 className="text-2xl font-bold text-white tracking-tight">{activeCalc.name}</h3>
+                    <h1 className="text-2xl font-bold text-white tracking-tight">{activeCalc.name}</h1>
                     <p className="text-xs text-gray-400 font-light leading-relaxed">{activeCalc.description}</p>
                   </div>
 
@@ -382,9 +382,9 @@ export default function CalculatorsHub({ lang }: CalculatorsHubProps) {
                 <Calculator className="w-3.5 h-3.5" />
                 <span>Quantity & Cost Matrices</span>
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-250 to-gray-400 flex items-center justify-center gap-3">
+              <h1 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-250 to-gray-400 flex items-center justify-center gap-3">
                 <span>Interactive Estimators</span>
-              </h2>
+              </h1>
               <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base font-light">
                 Calculate raw materials quantities, estimate construction costs, configure setups, and evaluate energy savings in seconds.
               </p>
