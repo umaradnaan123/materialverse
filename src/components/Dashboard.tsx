@@ -211,7 +211,7 @@ export default function Dashboard({
             {filteredMaterials.map((mat) => {
               const isBookmarked = bookmarks.includes(mat.id);
               return (
-                <Link key={mat.id} href={`/material/${mat.id}`} className="block">
+                <Link key={mat.id} href={`/materials/${mat.id}`} className="block">
                   <motion.div
                     layout
                     variants={cardVariants}

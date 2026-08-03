@@ -12,7 +12,7 @@ export default function GuidesClient() {
       selectedArticleId={null}
       onSelectArticle={(id) => {
         if (id) {
-          router.push(`/guide/${id}`);
+          router.push(`/guides/${id}`);
         }
       }}
       onBackToHome={() => router.push('/')}

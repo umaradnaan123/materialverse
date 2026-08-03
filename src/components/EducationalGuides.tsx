@@ -388,7 +388,7 @@ export default function EducationalGuides({
             {filteredArticles.map((art) => {
               const isBookmarked = bookmarkedArticles.includes(art.id);
               return (
-                <Link key={art.id} href={`/guide/${art.id}`} className="block">
+                <Link key={art.id} href={`/guides/${art.id}`} className="block">
                   <div
                     className="glass-panel glass-panel-hover rounded-2xl p-6 border border-white/5 cursor-pointer flex flex-col justify-between group/guide relative h-full"
                   >

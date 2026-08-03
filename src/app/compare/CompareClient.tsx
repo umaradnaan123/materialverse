@@ -15,7 +15,7 @@ export default function CompareClient() {
       compareList={compareList}
       onRemoveFromCompare={removeFromCompare}
       onClearCompare={clearCompare}
-      onSelectMaterial={(id) => router.push(`/material/${id}`)}
+      onSelectMaterial={(id) => router.push(`/materials/${id}`)}
     />
   );
 }

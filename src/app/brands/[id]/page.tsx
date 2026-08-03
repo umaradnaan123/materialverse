@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: `${SITE_URL}/brand/${id}`,
+      canonical: `${SITE_URL}/brands/${id}`,
     },
     robots: {
       index: true,
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       type: 'article',
-      url: `${SITE_URL}/brand/${id}`,
+      url: `${SITE_URL}/brands/${id}`,
       siteName: 'Materialpedia',
       images: brand.logo ? [{ url: brand.logo, alt: brand.name }] : undefined,
     },
@@ -111,7 +111,7 @@ export default async function Page({ params }: Props) {
         "@type": "ListItem",
         "position": 3,
         "name": brand.name,
-        "item": `https://materialpedia.org/brand/${id}`
+        "item": `${SITE_URL}/brands/${id}`
       }
     ]
   };

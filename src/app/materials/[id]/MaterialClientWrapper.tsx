@@ -17,7 +17,7 @@ export default function MaterialClientWrapper({ id }: { id: string }) {
       onAddToCompare={addToCompare}
       onToggleBookmark={toggleBookmark}
       bookmarks={bookmarks}
-      onSelectMaterial={(newId) => router.push(`/material/${newId}`)}
+      onSelectMaterial={(newId) => router.push(`/materials/${newId}`)}
     />
   );
 }

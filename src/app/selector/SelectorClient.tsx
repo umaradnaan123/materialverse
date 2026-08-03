@@ -12,7 +12,7 @@ export default function SelectorClient() {
   return (
     <RecommendationEngine
       lang={lang}
-      onSelectMaterial={(id) => router.push(`/material/${id}`)}
+      onSelectMaterial={(id) => router.push(`/materials/${id}`)}
     />
   );
 }

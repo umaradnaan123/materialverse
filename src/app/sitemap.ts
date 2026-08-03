@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Dynamic material paths
   const materialPaths = materialsData.map((m) => ({
-    url: `${baseUrl}/material/${m.id}`,
+    url: `${baseUrl}/materials/${m.id}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.7,
@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Dynamic brand paths
   const brandPaths = brandsData.map((b) => ({
-    url: `${baseUrl}/brand/${b.id}`,
+    url: `${baseUrl}/brands/${b.id}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.6,
@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Dynamic guide paths
   const guidePaths = articlesData.map((a) => ({
-    url: `${baseUrl}/guide/${a.id}`,
+    url: `${baseUrl}/guides/${a.id}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.6,

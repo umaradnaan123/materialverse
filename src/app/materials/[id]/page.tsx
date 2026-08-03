@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: `${SITE_URL}/material/${id}`,
+      canonical: `${SITE_URL}/materials/${id}`,
     },
     robots: {
       index: true,
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       type: 'article',
-      url: `${SITE_URL}/material/${id}`,
+      url: `${SITE_URL}/materials/${id}`,
       siteName: 'Materialpedia',
     },
     twitter: {
@@ -114,7 +114,7 @@ export default async function Page({ params }: Props) {
         "@type": "ListItem",
         "position": 3,
         "name": material.name,
-        "item": `https://materialpedia.org/material/${id}`
+        "item": `${SITE_URL}/materials/${id}`
       }
     ]
   };

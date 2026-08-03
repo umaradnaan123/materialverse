@@ -12,7 +12,7 @@ export default function GuideClientWrapper({ id }: { id: string }) {
       selectedArticleId={id}
       onSelectArticle={(articleId) => {
         if (articleId) {
-          router.push(`/guide/${articleId}`);
+          router.push(`/guides/${articleId}`);
         } else {
           router.push('/guides');
         }

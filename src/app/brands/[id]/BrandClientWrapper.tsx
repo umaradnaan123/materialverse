@@ -12,7 +12,7 @@ export default function BrandClientWrapper({ id }: { id: string }) {
       selectedBrandId={id}
       onSelectBrand={(brandId) => {
         if (brandId) {
-          router.push(`/brand/${brandId}`);
+          router.push(`/brands/${brandId}`);
         } else {
           router.push('/brands');
         }

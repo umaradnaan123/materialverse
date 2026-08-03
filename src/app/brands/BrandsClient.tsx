@@ -15,7 +15,7 @@ function BrandsContent() {
       initialCategory={initialCategory}
       onSelectBrand={(id) => {
         if (id) {
-          router.push(`/brand/${id}`);
+          router.push(`/brands/${id}`);
         }
       }}
       onBackToHome={() => router.push('/')}

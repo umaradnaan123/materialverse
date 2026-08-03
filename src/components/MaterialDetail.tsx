@@ -6,10 +6,11 @@ import { translations, Language } from '../data/translations';
 import { 
   ArrowLeft, Star, Leaf, Award, ShieldCheck, 
   Wrench, CheckSquare, Sparkles, AlertTriangle, 
-  Download, Bookmark, BookmarkCheck, Scale, Send, ShieldAlert, AlertCircle
+  Download, Bookmark, BookmarkCheck, Scale, Send, ShieldAlert, AlertCircle, Info
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { motion, AnimatePresence } from 'framer-motion';
+import { generateEncyclopediaForMaterial } from '../utils/seoContentGenerator';
 
 interface MaterialDetailProps {
   materialId: string;
@@ -126,6 +127,7 @@ export default function MaterialDetail({
   };
 
   const relatedMats = materialsData.filter((m) => material.related.includes(m.id));
+  const seo = generateEncyclopediaForMaterial(material, relatedMats);
 
   // Animation variants
   const pageVariants = {
@@ -509,6 +511,128 @@ export default function MaterialDetail({
         </motion.div>
 
       </div>
+
+      {/* 2026 SEO OVERHAUL: Full-length Material Encyclopedia */}
+      <motion.div 
+        variants={childVariants} 
+        className="glass-panel rounded-3xl p-6 md:p-8 space-y-8 shadow-2xl mt-8"
+      >
+        <div className="border-b border-gray-850 pb-4 space-y-2">
+          <span className="text-[10px] font-bold text-blue-400 uppercase tracking-widest block">Structural Knowledge Hub</span>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+            Comprehensive Engineering Guide &amp; Technical Encyclopedia
+          </h2>
+          <p className="text-xs text-gray-300 font-light leading-relaxed">
+            {seo.intro}
+          </p>
+        </div>
+
+        {/* Technical Properties Specifications Table */}
+        <div className="space-y-4">
+          <h3 className="text-sm font-bold text-white flex items-center gap-2 uppercase tracking-wider">
+            <Info className="w-4 h-4 text-blue-400" />
+            <span>Certified Physical &amp; Mechanical Properties</span>
+          </h3>
+          <div className="overflow-x-auto border border-gray-850 rounded-2xl bg-gray-950/40 shadow-inner">
+            <table className="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr className="border-b border-gray-850 bg-gray-900/60 text-gray-400 font-bold uppercase tracking-wider text-[10px]">
+                  <th className="p-4">Property Parameters</th>
+                  <th className="p-4">Standard Value</th>
+                  <th className="p-4">Technical Specification Notes</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-850 text-gray-300 font-light">
+                {seo.specificationsTable.map((prop, idx) => (
+                  <tr key={idx} className="hover:bg-gray-900/20">
+                    <td className="p-4 font-bold text-white">{prop.name}</td>
+                    <td className="p-4 text-emerald-400 font-mono font-bold">{prop.value}</td>
+                    <td className="p-4">{prop.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Manufacturing & Processing */}
+        <div className="space-y-3">
+          <h3 className="text-sm font-bold text-white flex items-center gap-2 uppercase tracking-wider">
+            <Wrench className="w-4 h-4 text-indigo-400" />
+            <span>Manufacturing Process &amp; Quality Specifications</span>
+          </h3>
+          <p className="text-xs text-gray-300 leading-relaxed font-light bg-gray-900/20 p-4 rounded-xl border border-gray-850/60">
+            {seo.manufacturing}
+          </p>
+        </div>
+
+        {/* Tabular Alternatives Comparison */}
+        <div className="space-y-4">
+          <h3 className="text-sm font-bold text-white flex items-center gap-2 uppercase tracking-wider">
+            <Scale className="w-4 h-4 text-amber-400" />
+            <span>Material Alternatives Comparison Matrix</span>
+          </h3>
+          <div className="overflow-x-auto border border-gray-850 rounded-2xl bg-gray-950/40 shadow-inner">
+            <table className="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr className="border-b border-gray-850 bg-gray-900/60 text-gray-400 font-bold uppercase tracking-wider text-[10px]">
+                  <th className="p-4">Alternative Specimen</th>
+                  <th className="p-4">Durability Quotient</th>
+                  <th className="p-4">Cost Index</th>
+                  <th className="p-4">Eco Index</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-850 text-gray-300 font-light">
+                {seo.alternativesComparison.map((alt, idx) => (
+                  <tr key={idx} className="hover:bg-gray-900/20">
+                    <td className="p-4 font-bold text-white">{alt.material}</td>
+                    <td className="p-4 text-blue-400">{alt.durability}</td>
+                    <td className="p-4 text-emerald-400">{alt.cost}</td>
+                    <td className="p-4 text-indigo-400">{alt.eco}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* FAQ Accordion Section */}
+        <div className="space-y-4">
+          <h3 className="text-sm font-bold text-white flex items-center gap-2 uppercase tracking-wider">
+            <AlertCircle className="w-4 h-4 text-teal-400" />
+            <span>Technical FAQ &amp; Expert Reference Guidelines</span>
+          </h3>
+          <div className="space-y-3">
+            {seo.faqs.map((faq, idx) => (
+              <div key={idx} className="space-y-2 bg-gray-900/40 p-5 rounded-2xl border border-gray-850 shadow-inner">
+                <h4 className="text-xs font-bold text-white flex items-center gap-2">
+                  <span className="text-blue-500">Q:</span>
+                  <span>{faq.q}</span>
+                </h4>
+                <p className="text-xs text-gray-300 leading-relaxed font-light pl-6 border-l border-gray-850">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* EEAT Block / Trust signals */}
+        <div className="border-t border-gray-850 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-gray-400 font-light">
+          <div className="space-y-1">
+            <p>
+              Written by <strong className="text-white">{seo.eeat.author}</strong> - {seo.eeat.bio}
+            </p>
+            <p className="text-[10px] text-gray-500">
+              Verified by the <strong>{seo.eeat.verifiedBy}</strong>. Document Reference Standards: {seo.eeat.references.join(', ')}.
+            </p>
+          </div>
+          <div className="text-[10px] text-gray-500 shrink-0 text-right">
+            Last Updated: {seo.eeat.lastUpdated}
+          </div>
+        </div>
+      </motion.div>
+
     </motion.div>
   );
 }
