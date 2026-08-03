@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { materialsData } from '../data/materialsData';
 import { brandsData } from '../data/brandsData';
 import { articlesData } from '../data/articlesData';
+import { blogData } from '../data/blogData';
 
 import { SITE_URL } from '@/config/seo';
 
@@ -21,6 +22,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/brands',
     '/guides',
     '/prices',
+    '/blog',
+    '/about',
+    '/contact',
+    '/privacy',
+    '/terms',
+    '/disclaimer',
+    '/authors',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -52,5 +60,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPaths, ...materialPaths, ...brandPaths, ...guidePaths];
+  // Dynamic blog paths
+  const blogPaths = blogData.map((post) => ({
+    url: `${baseUrl}/blog/${post.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPaths, ...materialPaths, ...brandPaths, ...guidePaths, ...blogPaths];
 }

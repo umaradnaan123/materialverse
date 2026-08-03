@@ -3,6 +3,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import { materialsData } from '../../../data/materialsData';
 import MaterialClientWrapper from './MaterialClientWrapper';
+import Breadcrumbs from '../../../components/Breadcrumbs';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -129,6 +130,9 @@ export default async function Page({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <div className="max-w-5xl mx-auto px-4 md:px-8">
+        <Breadcrumbs items={[{ label: "Materials" }, { label: material.name }]} />
+      </div>
       <MaterialClientWrapper id={id} />
     </>
   );

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import Link from 'next/link';
 import { AppProvider } from "../context/AppContext";
 import Header from "../components/Header";
 import MobileBottomNav from "../components/MobileBottomNav";
@@ -102,11 +103,22 @@ export default function RootLayout({
             {children}
           </main>
           <MobileBottomNav />
-          <footer className="border-t border-gray-900 bg-gray-955/40 py-8 text-center text-xs text-gray-500 no-print space-y-2">
-            <p className="font-medium">© 2026 MaterialVerse - The Material Knowledge Platform.</p>
-            <p className="font-light tracking-wide text-[10px]">
-              100% Static Web Resource powered by Next.js Export & React. Fully Offline Compatible (PWA).
-            </p>
+          <footer className="border-t border-gray-900 bg-gray-955/40 py-8 text-center text-xs text-gray-500 no-print space-y-4">
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[10px] text-gray-400 font-semibold uppercase tracking-wider">
+              <Link href="/blog" className="hover:text-white transition-colors">Blog Hub</Link>
+              <Link href="/about" className="hover:text-white transition-colors">About Us</Link>
+              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+              <Link href="/authors" className="hover:text-white transition-colors">Authors</Link>
+              <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+              <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+              <Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
+            </div>
+            <div className="space-y-1">
+              <p className="font-medium">© 2026 MaterialVerse - The Material Knowledge Platform.</p>
+              <p className="font-light tracking-wide text-[10px]">
+                100% Static Web Resource powered by Next.js Export & React. Fully Offline Compatible (PWA).
+              </p>
+            </div>
           </footer>
         </AppProvider>
       </body>
