@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/config/seo';
 import React from 'react';
 import { Metadata } from 'next';
 import { materialsData } from '../../../data/materialsData';
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: `https://materialpedia.org/material/${id}`,
+      canonical: `${SITE_URL}/material/${id}`,
     },
     robots: {
       index: true,
@@ -39,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       type: 'article',
-      url: `https://materialpedia.org/material/${id}`,
+      url: `${SITE_URL}/material/${id}`,
       siteName: 'Materialpedia',
     },
     twitter: {
@@ -101,13 +102,13 @@ export default async function Page({ params }: Props) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://materialpedia.org"
+        "item": `${SITE_URL}`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Materials",
-        "item": "https://materialpedia.org"
+        "item": `${SITE_URL}`
       },
       {
         "@type": "ListItem",

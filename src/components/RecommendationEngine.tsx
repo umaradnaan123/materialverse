@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { RecommendationScenario, recommendationsData } from '../data/recommendationsData';
 import { translations, Language } from '../data/translations';
 import { 
@@ -435,23 +436,23 @@ export default function RecommendationEngine({ lang, onSelectMaterial }: Recomme
                   <div className="flex flex-col sm:flex-row justify-between gap-4">
                     <div className="flex-1 space-y-2">
                       <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest block">Estimation Tool</span>
-                      <a
-                        href="#/calculators"
+                      <Link
+                        href="/calculators"
                         className="w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all flex items-center justify-center gap-2 text-xs shadow-lg hover:shadow-blue-500/20"
                       >
                         <Calculator className="w-4 h-4" />
                         <span>Open Material Estimator</span>
-                      </a>
+                      </Link>
                     </div>
                     <div className="flex-1 space-y-2">
                       <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest block">Reference Guides</span>
-                      <a
-                        href="#/guides"
+                      <Link
+                        href="/guides"
                         className="w-full py-2.5 rounded-xl bg-gray-900 hover:bg-gray-800 text-gray-200 border border-gray-800 font-semibold transition-all flex items-center justify-center gap-2 text-xs"
                       >
                         <FileText className="w-4 h-4" />
                         <span>Read Educational Guides</span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
 

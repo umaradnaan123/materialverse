@@ -5,6 +5,8 @@ import { AppProvider } from "../context/AppContext";
 import Header from "../components/Header";
 import MobileBottomNav from "../components/MobileBottomNav";
 
+import { SITE_URL } from "@/config/seo";
+
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://materialpedia.org"),
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "/",
   },
@@ -45,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Materialpedia - The Encyclopedia of Materials",
     description: "Wikipedia for Materials. Find standards, lifespans, price estimates, durability ratings, environmental impact, calculators, and comparison matrices for 60+ material categories.",
-    url: "https://materialpedia.org",
+    url: SITE_URL,
     siteName: "Materialpedia",
     locale: "en_US",
     type: "website",

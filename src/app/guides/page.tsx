@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/config/seo';
 import React from 'react';
 import { Metadata } from 'next';
 import GuidesClient from './GuidesClient';
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Educational Installation & Buying Guides | Materialpedia",
   description: "Read professional walkthroughs, installation steps, and material procurement guidelines written by engineering specialists.",
   alternates: {
-    canonical: "https://materialpedia.org/guides",
+    canonical: `${SITE_URL}/guides`,
   },
   robots: {
     index: true,
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Educational Installation & Buying Guides | Materialpedia",
     description: "Read professional walkthroughs, installation steps, and material procurement guidelines written by engineering specialists.",
-    url: "https://materialpedia.org/guides",
+    url: `${SITE_URL}/guides`,
     type: "website",
   },
 };
@@ -25,7 +26,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Educational Installation & Buying Guides",
-    "url": "https://materialpedia.org/guides",
+    "url": `${SITE_URL}/guides`,
     "description": "Library of engineering articles, step-by-step DIY installation guidelines, and raw material safety instructions."
   };
 

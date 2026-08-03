@@ -199,13 +199,13 @@ export default function EducationalGuides({
                   <p className="text-[11px] text-gray-400 leading-relaxed font-light">
                     Perform automatic structural estimations using the calculator associated with this guide.
                   </p>
-                  <a
-                    href="#/calculators"
+                  <Link
+                    href="/calculators"
                     className="w-full py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-all flex items-center justify-center gap-2 text-xs"
                   >
                     <span>Run Calculator</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>

@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/config/seo';
 import React from 'react';
 import { Metadata } from 'next';
 import PricesClient from './PricesClient';
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Material Price Intelligence & Market Estimates | Materialpedia",
   description: "Track price ranges, market estimates, GST taxes, labor costs, and cost intelligence databases for structural and finish materials.",
   alternates: {
-    canonical: "https://materialpedia.org/prices",
+    canonical: `${SITE_URL}/prices`,
   },
   robots: {
     index: true,
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Material Price Intelligence & Market Estimates | Materialpedia",
     description: "Track price ranges, market estimates, GST taxes, labor costs, and cost intelligence databases for structural and finish materials.",
-    url: "https://materialpedia.org/prices",
+    url: `${SITE_URL}/prices`,
     type: "website",
   },
 };
@@ -25,7 +26,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Material Price Intelligence & Market Estimates",
-    "url": "https://materialpedia.org/prices",
+    "url": `${SITE_URL}/prices`,
     "description": "Live trackers and estimates for construction material costs, taxation categories, and labor charges."
   };
 

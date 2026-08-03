@@ -455,9 +455,9 @@ export default function BrandDirectory({
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {getRelatedMaterials(activeBrand.categories).map((mat) => (
-                      <a
+                      <Link
                         key={mat.id}
-                        href={`#/material/${mat.id}`}
+                        href={`/material/${mat.id}`}
                         className="glass-panel hover:bg-gray-800/40 rounded-2xl p-4.5 border border-white/5 flex items-center justify-between group transition-all shadow-sm"
                       >
                         <div className="space-y-1">
@@ -465,7 +465,7 @@ export default function BrandDirectory({
                           <div className="text-sm font-bold text-white group-hover:text-blue-400 transition-colors">{mat.name}</div>
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-500 group-hover:translate-x-1.5 transition-transform" />
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -608,13 +608,13 @@ export default function BrandDirectory({
                       </span>
                     </div>
                   </div>
-                  <a
-                    href="#/glossary"
+                  <Link
+                    href="/glossary"
                     className="text-xs font-bold text-blue-400 hover:text-blue-300 flex items-center gap-1 shrink-0"
                   >
                     <span>Inspect Code Directory</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
+                  </Link>
                 </motion.div>
               )}
             </AnimatePresence>

@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/config/seo';
 import React from 'react';
 import { Metadata } from 'next';
 import BookmarksClient from './BookmarksClient';
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Bookmarked Materials | Materialpedia",
   description: "Your saved material profiles, specifications, pricing matrices, and guides.",
   alternates: {
-    canonical: "https://materialpedia.org/bookmarks",
+    canonical: `${SITE_URL}/bookmarks`,
   },
   robots: {
     index: false,
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bookmarked Materials | Materialpedia",
     description: "Your saved material profiles, specifications, pricing matrices, and guides.",
-    url: "https://materialpedia.org/bookmarks",
+    url: `${SITE_URL}/bookmarks`,
     type: "website",
   },
 };
@@ -25,7 +26,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Bookmarked Materials",
-    "url": "https://materialpedia.org/bookmarks",
+    "url": `${SITE_URL}/bookmarks`,
     "description": "User custom bookmarked materials watchlist on Materialpedia."
   };
 

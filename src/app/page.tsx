@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/config/seo';
 import React from 'react';
 import { Metadata } from 'next';
 import HomeClient from './HomeClient';
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Materialpedia - The Encyclopedia of Materials",
   description: "Find engineering standards, lifespans, price estimates, durability ratings, environmental impact, calculators, and comparison matrices for 60+ material categories.",
   alternates: {
-    canonical: "https://materialpedia.org",
+    canonical: `${SITE_URL}`,
   },
   robots: {
     index: true,
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Materialpedia - The Encyclopedia of Materials",
     description: "Find engineering standards, lifespans, price estimates, durability ratings, environmental impact, calculators, and comparison matrices for 60+ material categories.",
-    url: "https://materialpedia.org",
+    url: `${SITE_URL}`,
     type: "website",
   },
 };
@@ -25,12 +26,12 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Materialpedia",
-    "url": "https://materialpedia.org",
+    "url": `${SITE_URL}`,
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://materialpedia.org/?search={search_term_string}"
+        "urlTemplate": `${SITE_URL}/?search={search_term_string}`
       },
       "query-input": "required name=search_term_string"
     }
@@ -40,8 +41,8 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "MaterialVerse Ltd",
-    "url": "https://materialpedia.org",
-    "logo": "https://materialpedia.org/icon.png",
+    "url": `${SITE_URL}`,
+    "logo": `${SITE_URL}/icon.png`,
     "sameAs": [
       "https://twitter.com/materialpedia",
       "https://github.com/materialpedia"

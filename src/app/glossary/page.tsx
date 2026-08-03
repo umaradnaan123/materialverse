@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/config/seo';
 import React from 'react';
 import { Metadata } from 'next';
 import GlossaryClient from './GlossaryClient';
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Engineering Glossary & BIS Standards Reference | Materialpedia",
   description: "Browse detailed engineering glossary terms and Bureau of Indian Standards (BIS) license specifications for raw, structural, and finish materials.",
   alternates: {
-    canonical: "https://materialpedia.org/glossary",
+    canonical: `${SITE_URL}/glossary`,
   },
   robots: {
     index: true,
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Engineering Glossary & BIS Standards Reference | Materialpedia",
     description: "Browse detailed engineering glossary terms and Bureau of Indian Standards (BIS) license specifications for raw, structural, and finish materials.",
-    url: "https://materialpedia.org/glossary",
+    url: `${SITE_URL}/glossary`,
     type: "website",
   },
 };
@@ -25,7 +26,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Engineering Glossary & BIS Standards Reference",
-    "url": "https://materialpedia.org/glossary",
+    "url": `${SITE_URL}/glossary`,
     "description": "Explanatory list of civil engineering terminology and regulatory licensing certifications (ISI and BIS) matching industrial code specifications."
   };
 

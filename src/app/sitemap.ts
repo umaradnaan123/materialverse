@@ -3,10 +3,12 @@ import { materialsData } from '../data/materialsData';
 import { brandsData } from '../data/brandsData';
 import { articlesData } from '../data/articlesData';
 
+import { SITE_URL } from '@/config/seo';
+
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://materialpedia.org';
+  const baseUrl = SITE_URL;
 
   // Base static paths
   const staticPaths = [

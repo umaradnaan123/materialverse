@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/config/seo';
 import React from 'react';
 import { Metadata } from 'next';
 import BrandsClient from './BrandsClient';
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Certified Brand Directory & Manufacturers | Materialpedia",
   description: "Browse verified material brand directories, manufacturers, certifications, and compliance licenses across civil construction categories.",
   alternates: {
-    canonical: "https://materialpedia.org/brands",
+    canonical: `${SITE_URL}/brands`,
   },
   robots: {
     index: true,
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Certified Brand Directory & Manufacturers | Materialpedia",
     description: "Browse verified material brand directories, manufacturers, certifications, and compliance licenses across civil construction categories.",
-    url: "https://materialpedia.org/brands",
+    url: `${SITE_URL}/brands`,
     type: "website",
   },
 };
@@ -25,7 +26,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Certified Brand Directory & Manufacturers",
-    "url": "https://materialpedia.org/brands",
+    "url": `${SITE_URL}/brands`,
     "description": "Comprehensive directory profiling top quality-certified material manufacturers and license details."
   };
 
