@@ -173,6 +173,98 @@ export default function Dashboard({
         </div>
       </motion.div>
 
+      {/* 2026 EDUCATIONAL OVERHAUL: Study Portal Grid */}
+      <motion.div variants={itemVariants} className="space-y-8">
+        <div className="text-center space-y-1">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-bold uppercase tracking-widest mb-1">
+            <span>Study Hub</span>
+          </div>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-white">Academic Study Materials &amp; Roadmaps</h2>
+          <p className="text-xs text-gray-400">Access verified engineering notes, programming tutorials, and syllabus-aligned exam cheat sheets.</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Box 1: Computer Science & Programming */}
+          <div className="glass-panel rounded-3xl p-6 border border-white/5 bg-gradient-to-br from-indigo-950/10 to-transparent space-y-4">
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+              <span className="p-1.5 rounded-lg bg-indigo-500/10 text-indigo-400">💻</span>
+              <span>Computer Science &amp; Programming</span>
+            </h3>
+            <p className="text-xs text-gray-400 font-light leading-relaxed">
+              Master core computational foundations, coding syntaxes, and database schemas with comprehensive guides.
+            </p>
+            <div className="flex flex-col gap-2">
+              <Link href="/resources/data-structures-notes" className="text-xs text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-1">
+                <span>• DSA Lecture Notes</span>
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+              <Link href="/resources/operating-system-notes" className="text-xs text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-1">
+                <span>• Operating Systems Exam Notes</span>
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Box 2: Competitive Exams & Practice */}
+          <div className="glass-panel rounded-3xl p-6 border border-white/5 bg-gradient-to-br from-emerald-950/10 to-transparent space-y-4">
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+              <span className="p-1.5 rounded-lg bg-emerald-500/10 text-emerald-400">🎓</span>
+              <span>Competitive Exam Prep</span>
+            </h3>
+            <p className="text-xs text-gray-400 font-light leading-relaxed">
+              Ace GATE, placement interviews, and university semesters using targeted mathematical formula lists and cheatsheets.
+            </p>
+            <div className="flex flex-col gap-2">
+              <Link href="/resources/gate-engineering-math-formulas" className="text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1">
+                <span>• GATE Math Formula Sheet</span>
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+              <Link href="/blog/carbon-steel-vs-stainless-steel" className="text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1">
+                <span>• Carbon Steel vs Stainless Steel Guide</span>
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Box 3: Educational Blog Highlights */}
+          <div className="glass-panel rounded-3xl p-6 border border-white/5 bg-gradient-to-br from-blue-950/10 to-transparent space-y-4">
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+              <span className="p-1.5 rounded-lg bg-blue-500/10 text-blue-400">📝</span>
+              <span>Specialist Research Articles</span>
+            </h3>
+            <p className="text-xs text-gray-400 font-light leading-relaxed">
+              Stay ahead with editorial columns written by Material science and engineering subject matter experts.
+            </p>
+            <div className="flex flex-col gap-2">
+              <Link href="/blog/opc-vs-ppc-cement" className="text-xs text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1">
+                <span>• OPC vs PPC Cement Selection</span>
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+              <Link href="/blog/sustainable-materials-engineering" className="text-xs text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1">
+                <span>• Green Materials &amp; Eco-Audits</span>
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Global CTA and Roadmaps Card */}
+        <div className="glass-panel rounded-3xl p-6 border border-white/5 bg-gradient-to-r from-indigo-950/15 via-[#0b0f19] to-indigo-950/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div className="space-y-1">
+            <h4 className="text-sm font-bold text-white flex items-center gap-1">
+              <Sparkles className="w-4 h-4 text-indigo-400 animate-pulse" />
+              <span>Full Study Materials Library Available</span>
+            </h4>
+            <p className="text-xs text-gray-400 font-light">
+              Explore the entire repository containing B.Tech files, handwritten guides, compiler design cheatsheets, and interview questions.
+            </p>
+          </div>
+          <Link href="/resources" className="px-5 py-2.5 rounded-xl bg-indigo-650 hover:bg-indigo-500 text-white font-bold text-xs transition-all shadow-md shadow-indigo-550/10 shrink-0">
+            Browse All Resources
+          </Link>
+        </div>
+      </motion.div>
+
       {/* Featured Categories Filter & Grid Section */}
       <div id="featured-categories" className="space-y-6 scroll-mt-20">
         <div className="text-center space-y-1">

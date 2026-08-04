@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useApp } from '../context/AppContext';
 import { 
   Compass, Library, Scale, Calculator, Award, FileText, 
-  BarChart2, Info, Bookmark, Globe, Menu, X 
+  BarChart2, Info, Bookmark, Globe, Menu, X, GraduationCap
 } from 'lucide-react';
 import { Language } from '../data/translations';
 
@@ -17,6 +17,7 @@ export default function Header() {
 
   const navItems = [
     { id: 'library', path: '/', label: "Materials", icon: Library },
+    { id: 'resources', path: '/resources', label: "Resources", icon: GraduationCap },
     { id: 'selector', path: '/selector', label: "Finder", icon: Compass },
     { id: 'compare', path: '/compare', label: "Compare Matrix", icon: Scale, badge: compareList.length },
     { id: 'calculators', path: '/calculators', label: "Calculators Hub", icon: Calculator },
