@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `${SITE_URL}/brands/${id}`,
     },
     robots: {
-      index: true,
+      index: false,
       follow: true,
     },
     openGraph: {

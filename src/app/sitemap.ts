@@ -1,6 +1,5 @@
 import { MetadataRoute } from 'next';
 import { materialsData } from '../data/materialsData';
-import { brandsData } from '../data/brandsData';
 import { articlesData } from '../data/articlesData';
 import { blogData } from '../data/blogData';
 import { resourcesData } from '../data/resourcesData';
@@ -46,14 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // Dynamic brand paths
-  const brandPaths = brandsData.map((b) => ({
-    url: `${baseUrl}/brands/${b.id}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.6,
-  }));
-
   // Dynamic guide paths
   const guidePaths = articlesData.map((a) => ({
     url: `${baseUrl}/guides/${a.id}`,
@@ -78,5 +69,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPaths, ...materialPaths, ...brandPaths, ...guidePaths, ...blogPaths, ...resourcePaths];
+  return [...staticPaths, ...materialPaths, ...guidePaths, ...blogPaths, ...resourcePaths];
 }
