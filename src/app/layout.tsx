@@ -96,6 +96,11 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="monetag" content="cda8fa4d7d6622ef7f52f8dbd5e41bf9" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(s){s.dataset.zone='11531059',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col font-sans bg-[#0b0f19] text-gray-100 pb-20 md:pb-0" suppressHydrationWarning>
         <AppProvider>
