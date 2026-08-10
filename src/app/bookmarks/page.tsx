@@ -36,6 +36,10 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <div className="sr-only">
+        <h1>Bookmarked Materials | Materialpedia</h1>
+        <p>Your saved material profiles, specifications, pricing matrices, and guides.</p>
+      </div>
       <BookmarksClient />
     </>
   );

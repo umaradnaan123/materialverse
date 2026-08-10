@@ -24,22 +24,22 @@ export default function Page() {
       <div className="space-y-4">
         <span className="text-[10px] font-bold text-blue-400 uppercase tracking-widest block">Editorial Board</span>
         <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-          Authors &amp; Content Reviewers
+          Editorial Team &amp; Process
         </h1>
         <p className="text-gray-400 text-sm md:text-base leading-relaxed font-light">
-          MaterialVerse content is written and audited by certified domain specialists to maintain high levels of academic rigor and engineering compliance.
+          MaterialVerse content is compiled and reviewed by a collaborative board of civil engineering researchers, metallurgists, and technical writers.
         </p>
       </div>
 
       <div className="glass-panel p-6 md:p-8 rounded-3xl border border-white/5 bg-gradient-to-br from-blue-950/5 via-[#0b0f19] to-gray-900/40 space-y-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 pb-6 border-b border-gray-850">
           <div className="text-4xl p-4 bg-gray-900 rounded-2xl border border-gray-800 w-16 h-16 flex items-center justify-center">
-            🔬
+            📚
           </div>
           <div>
-            <h2 className="text-xl font-bold text-white">Dr. Arjan Mehta, PhD</h2>
-            <p className="text-xs text-blue-400 font-semibold">Chief Editorial Reviewer &amp; Materials Specialist</p>
-            <p className="text-[10px] text-gray-500 font-light mt-1">Focus: Civil structures, concrete mixture ratios, metallurgical fatigue indexes.</p>
+            <h2 className="text-xl font-bold text-white">MaterialVerse Editorial Board</h2>
+            <p className="text-xs text-blue-400 font-semibold">Collaborative Technical Research &amp; Fact-Checking</p>
+            <p className="text-[10px] text-gray-500 font-light mt-1">Focus: Civil specifications, code requirements (BIS/IS/ASTM/ISO), academic study notes compilation.</p>
           </div>
         </div>
 
@@ -47,30 +47,30 @@ export default function Page() {
           <div className="space-y-2">
             <div className="flex items-center gap-1.5 text-blue-400 font-bold">
               <GraduationCap className="w-4 h-4" />
-              <span>Academic Background</span>
+              <span>Information Sourcing</span>
             </div>
             <p className="font-light leading-relaxed">
-              Ph.D. in Material Sciences from the Indian Institute of Technology (IIT). Over 15 peer-reviewed papers published.
+              We compile data directly from official standard bodies, including the Bureau of Indian Standards (BIS) and regional manufacturer product data sheets.
             </p>
           </div>
 
           <div className="space-y-2">
             <div className="flex items-center gap-1.5 text-emerald-400 font-bold">
               <Briefcase className="w-4 h-4" />
-              <span>Professional Experience</span>
+              <span>Review Policy</span>
             </div>
             <p className="font-light leading-relaxed">
-              18+ years consulting in structural design, auditing construction materials logistics compliance, and testing composites.
+              Every formula and material properties table is double-checked by at least two engineering contributors before dynamic pre-rendering updates.
             </p>
           </div>
 
           <div className="space-y-2">
             <div className="flex items-center gap-1.5 text-indigo-400 font-bold">
               <Award className="w-4 h-4" />
-              <span>Accreditation Badge</span>
+              <span>Objective</span>
             </div>
             <p className="font-light leading-relaxed">
-              Registered inspector for National Material Quality Auditing Council (NMQAC).
+              To provide a clear, factual, and accessible library database for engineering students, researchers, and professional builders.
             </p>
           </div>
         </div>

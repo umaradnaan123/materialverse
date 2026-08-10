@@ -19,8 +19,8 @@ export const blogData: BlogPost[] = [
     category: "Metallurgy",
     readingTime: "12 min read",
     lastUpdated: "August 2026",
-    author: "Dr. Arjan Mehta, PhD",
-    authorBio: "Senior Material Scientist and metallurgy audit specialist.",
+    author: "MaterialVerse Editorial Team",
+    authorBio: "Technical writers and engineering research team.",
     description: "An in-depth metallurgical comparison between carbon steel and stainless steel. Learn differences in yield strength, corrosion resistance, alloying elements, and cost profiles.",
     content: "Carbon steel and stainless steel represent two of the most widely specified metallic families in structural civil engineering, manufacturing, and industrial tooling. While both alloys derive their properties primarily from iron, their specific chemical formulations, microstructure configurations, and environmental performance vectors vary drastically.\n\n### 1. Alloying Composition & Chromium Threshold\nThe structural differentiator lies in the chemical composition. Carbon steel is categorized by carbon concentrations ranging from 0.05% to 2.1% by weight. Stainless steel, on the other hand, requires a minimum chromium content of 10.5% by weight. This chromium creates an invisible, self-healing passive layer of chromium oxide, preventing oxygen from reaching the underlying iron, thereby stopping rust.\n\n### 2. Corrosion Behavior & Lifespan\n- **Carbon Steel**: Lacks chromium; highly susceptible to oxidation (rusting) if exposed to water and ambient oxygen. Often requires protective galvanization, powder coatings, or epoxy sealers. Typical lifespan in corrosive environments ranges from 15 to 40 years without intervention.\n- **Stainless Steel**: Extremely resistant to wet environments, chemical splashes, and organic acids. Perfect for food processing plants, surgical tools, and marine environments. Typical lifespan ranges from 80 to 100+ years.\n\n### 3. Mechanical & Structural Comparison\nCarbon steel generally displays superior heat treatment flexibility, allowing engineers to temper, harden, or anneal it to exact specification thresholds. For extreme structural loads, carbon steel offers highly efficient yield strength per dollar compared to premium austenitic stainless steel.",
     faqs: [
@@ -38,8 +38,8 @@ export const blogData: BlogPost[] = [
     category: "Civil Engineering",
     readingTime: "10 min read",
     lastUpdated: "August 2026",
-    author: "Dr. Arjan Mehta, PhD",
-    authorBio: "Senior Material Scientist specializing in structural concrete and compliance.",
+    author: "MaterialVerse Editorial Team",
+    authorBio: "Technical writers and engineering research team.",
     description: "Compare Ordinary Portland Cement (OPC) and Portland Pozzolana Cement (PPC) based on heat of hydration, curing times, compressive strength curves, and BIS specifications.",
     content: "In structural civil engineering, selection of the appropriate binding agent determines the structural lifespan and load characteristics of the concrete matrix. The choice between Ordinary Portland Cement (OPC) and Portland Pozzolana Cement (PPC) is one of the most critical decisions during structural planning.\n\n### 1. Ordinary Portland Cement (OPC)\nOPC is the most common cement grade globally. It consists of clinker ground with gypsum. OPC is available in three grades: OPC 33, OPC 43, and OPC 53, denoting the compressive strength after 28 days of curing. OPC exhibits a rapid rate of early strength gain, making it the choice for fast-track construction, high-rise framing, and precast concrete beams.\n\n### 2. Portland Pozzolana Cement (PPC)\nPPC incorporates pozzolanic materials (such as fly ash, volcanic ash, or calcined clay) up to 15% to 35% by weight. While PPC gains strength slower than OPC in the first 7 days, its long-term strength (at 28 days and beyond) is comparable or superior due to the secondary hydration reactions. Additionally, PPC generates lower heat of hydration, making it ideal for mass concrete work (such as dams and retaining walls).",
     faqs: [
@@ -57,8 +57,8 @@ export const blogData: BlogPost[] = [
     category: "Sustainable Development",
     readingTime: "15 min read",
     lastUpdated: "August 2026",
-    author: "Dr. Arjan Mehta, PhD",
-    authorBio: "Expert auditor for industrial ecology and environmental life cycle parameters.",
+    author: "MaterialVerse Editorial Team",
+    authorBio: "Technical writers and engineering research team.",
     description: "A comprehensive analysis of green engineering materials. Learn lifecycle analysis (LCA), circular economy principles, and low-carbon alternatives for concrete, steel, and plastics.",
     content: `The global construction and manufacturing industries account for over 40% of carbon emissions. Transitioning to sustainable engineering materials is no longer optional—it is a regulatory and ethical requirement. An eco-audit involves calculating raw extraction energy, transportation overheads, carbon footprint, and circular recycle options.
 

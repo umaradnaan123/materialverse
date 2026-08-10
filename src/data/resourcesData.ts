@@ -22,7 +22,7 @@ export const resourcesData: StudyResource[] = [
     description: "Comprehensive lecture notes covering Arrays, Linked Lists, Stacks, Queues, Trees, Graphs, Sorting, and Searching algorithms.",
     downloadSize: "4.8 MB",
     format: "PDF Notes",
-    author: "Dr. Arjan Mehta, PhD",
+    author: "MaterialVerse Editorial Team",
     lastUpdated: "August 2026",
     syllabus: [
       "Introduction to Time & Space Complexity (Asymptotic Notation)",
@@ -56,7 +56,7 @@ Computational performance is analyzed using asymptotic notations (Big O, Omega, 
     description: "Detailed study notes on Process Management, Threading, CPU Scheduling, Memory Management (Paging, Segmentation), Virtual Memory, and Disk Scheduling.",
     downloadSize: "3.2 MB",
     format: "PDF Notes",
-    author: "Dr. Arjan Mehta, PhD",
+    author: "MaterialVerse Editorial Team",
     lastUpdated: "August 2026",
     syllabus: [
       "OS Structures & Services",
@@ -93,7 +93,7 @@ Paging divides logical memory into blocks (pages) and physical memory into frame
     description: "Handy PDF cheat sheet containing formulas for Linear Algebra, Calculus, Differential Equations, Probability, and Numerical Methods.",
     downloadSize: "1.5 MB",
     format: "Cheat Sheet",
-    author: "Dr. Arjan Mehta, PhD",
+    author: "MaterialVerse Editorial Team",
     lastUpdated: "August 2026",
     syllabus: [
       "Linear Algebra: Matrix operations, Eigenvalues, Eigenvectors, Cayley-Hamilton Theorem",

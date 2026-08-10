@@ -474,7 +474,7 @@ export default function BrandDirectory({
                 <div className="border-t border-gray-855 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-gray-400 font-light">
                   <div className="space-y-1">
                     <p>
-                      Manufacturer specifications audited by <strong className="text-white">Dr. Arjan Mehta, PhD</strong>
+                      Manufacturer specifications verified by <strong className="text-white">MaterialVerse Editorial Team</strong>
                     </p>
                     <p className="text-[10px] text-gray-500">
                       Licensing verified via Bureau of Indian Standards (BIS) registries and official brand corporate registries.

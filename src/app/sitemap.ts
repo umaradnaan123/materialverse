@@ -18,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/compare',
     '/selector',
     '/glossary',
-    '/bookmarks',
     '/brands',
     '/guides',
     '/prices',

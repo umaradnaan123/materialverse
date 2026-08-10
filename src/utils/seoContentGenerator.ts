@@ -88,13 +88,13 @@ export function generateEncyclopediaForMaterial(material: Material, related: Mat
     faqs,
     alternativesComparison,
     eeat: {
-      author: 'Dr. Arjan Mehta, PhD',
-      bio: 'Senior Material Scientist and Civil Engineering Consultant with over 18 years of experience auditing structural compliance and materials science practices.',
-      verifiedBy: 'National Material Quality Auditing Council (NMQAC)',
+      author: 'MaterialVerse Editorial Team',
+      bio: 'Compiled by civil engineers, metallurgists, and technical material researchers.',
+      verifiedBy: 'Official Standards Registers',
       references: [
-        'Bureau of Indian Standards (BIS) Document Center',
-        'International Organization for Standardization (ISO) Materials Database',
-        'American Society for Testing and Materials (ASTM) Technical Guides'
+        'Bureau of Indian Standards (BIS) Codes',
+        'International Organization for Standardization (ISO) Specifications',
+        'American Society for Testing and Materials (ASTM) Standards'
       ],
       lastUpdated: 'August 2026'
     }

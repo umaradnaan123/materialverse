@@ -36,6 +36,10 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <div className="sr-only">
+        <h1>Certified Brand Directory & Manufacturers | Materialpedia</h1>
+        <p>Browse verified material brand directories, manufacturers, certifications, and compliance licenses across civil construction categories.</p>
+      </div>
       <BrandsClient />
     </>
   );
