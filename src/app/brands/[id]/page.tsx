@@ -54,16 +54,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+import { notFound } from 'next/navigation';
+
 export default async function Page({ params }: Props) {
   const { id } = await params;
   const brand = brandsData.find((b) => b.id === id);
 
   if (!brand) {
-    return (
-      <div className="py-12 text-center text-red-400 font-bold">
-        Brand profile not found!
-      </div>
-    );
+    notFound();
   }
 
   // Brand structured JSON-LD schema

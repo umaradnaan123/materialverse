@@ -53,16 +53,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+import { notFound } from 'next/navigation';
+
 export default async function Page({ params }: Props) {
   const { id } = await params;
   const article = articlesData.find((a) => a.id === id);
 
   if (!article) {
-    return (
-      <div className="py-12 text-center text-red-400 font-bold">
-        Educational guide not found!
-      </div>
-    );
+    notFound();
   }
 
   // Article structured JSON-LD schema

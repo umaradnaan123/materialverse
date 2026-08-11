@@ -3,6 +3,7 @@ import { materialsData } from '../data/materialsData';
 import { articlesData } from '../data/articlesData';
 import { blogData } from '../data/blogData';
 import { resourcesData } from '../data/resourcesData';
+import { categoriesData } from '../data/categoriesData';
 
 import { SITE_URL } from '@/config/seo';
 
@@ -29,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/disclaimer',
     '/authors',
     '/resources',
+    '/categories',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -68,5 +70,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPaths, ...materialPaths, ...guidePaths, ...blogPaths, ...resourcePaths];
+  // Dynamic category paths
+  const categoryPaths = categoriesData.map((cat) => ({
+    url: `${baseUrl}/categories/${cat.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPaths, ...materialPaths, ...guidePaths, ...blogPaths, ...resourcePaths, ...categoryPaths];
 }

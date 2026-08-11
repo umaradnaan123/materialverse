@@ -51,16 +51,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+import { notFound } from 'next/navigation';
+
 export default async function Page({ params }: Props) {
   const { id } = await params;
   const resource = resourcesData.find((r) => r.id === id);
 
   if (!resource) {
-    return (
-      <div className="py-12 text-center text-red-400 font-bold">
-        Resource not found!
-      </div>
-    );
+    notFound();
   }
 
   // Pre-render Course/CreativeWork JSON-LD Schema

@@ -52,16 +52,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+import { notFound } from 'next/navigation';
+
 export default async function Page({ params }: Props) {
   const { id } = await params;
   const material = materialsData.find((m) => m.id === id);
 
   if (!material) {
-    return (
-      <div className="py-12 text-center text-red-400 font-bold">
-        Material not found!
-      </div>
-    );
+    notFound();
   }
 
   // Pre-render JSON-LD Structured Schema for search crawlers
