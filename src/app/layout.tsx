@@ -101,6 +101,16 @@ export default function RootLayout({
             __html: `(function(s){s.dataset.zone='11531059',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`
           }}
         />
+        {/* Google Analytics 4 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MV9981881"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-MV9981881');`
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col font-sans bg-[#0b0f19] text-gray-100 pb-20 md:pb-0" suppressHydrationWarning>
         <AppProvider>

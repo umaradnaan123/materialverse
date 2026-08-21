@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/authors',
     '/resources',
     '/categories',
+    '/materials',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
