@@ -7,7 +7,7 @@ import { LayoutGrid, ArrowRight, Layers, FileText } from 'lucide-react';
 import Breadcrumbs from '../../components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Materials Categories & Application Sectors | Materialpedia",
+  title: "Materials Categories & Application Sectors | MaterialVerse",
   description: "Browse building, interior finishes, electrical, plumbing, agricultural, textile, eco-friendly and cleanroom categories in MaterialVerse.",
   alternates: {
     canonical: `${SITE_URL}/categories`,

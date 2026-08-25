@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const brand = brandsData.find((b) => b.id === id);
   if (!brand) {
     return {
-      title: "Manufacturer Not Found | Materialpedia",
+      title: "Manufacturer Not Found | MaterialVerse",
     };
   }
 
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'article',
       url: `${SITE_URL}/brands/${id}`,
-      siteName: 'Materialpedia',
+      siteName: 'MaterialVerse',
       images: brand.logo ? [{ url: brand.logo, alt: brand.name }] : undefined,
     },
     twitter: {

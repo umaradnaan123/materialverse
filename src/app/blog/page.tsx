@@ -7,7 +7,7 @@ import { BookOpen, Calendar, Clock, ArrowRight } from 'lucide-react';
 import Breadcrumbs from '../../components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Engineering Materials Blog & Research Hub | Materialpedia",
+  title: "Engineering Materials Blog & Research Hub | MaterialVerse",
   description: "Read detailed metallurgy, civil engineering, polymers, and circular economy research guides written by material science specialists.",
   alternates: {
     canonical: `${SITE_URL}/blog`,

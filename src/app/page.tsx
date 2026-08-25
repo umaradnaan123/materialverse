@@ -44,8 +44,8 @@ export default function Page() {
     "url": `${SITE_URL}`,
     "logo": `${SITE_URL}/icon.png`,
     "sameAs": [
-      "https://twitter.com/materialpedia",
-      "https://github.com/materialpedia"
+      "https://twitter.com/materialverse",
+      "https://github.com/materialverse"
     ]
   };
 

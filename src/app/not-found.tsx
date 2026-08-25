@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Home, Compass, GraduationCap, Building2, Search, HelpCircle } from 'lucide-react';
 
 export const metadata = {
-  title: "404 Page Not Found | Materialpedia",
+  title: "404 Page Not Found | MaterialVerse",
   description: "The page you requested could not be found. Use the directory below to explore certified materials, engineering guides, and manufacturer brands.",
   robots: {
     index: false,

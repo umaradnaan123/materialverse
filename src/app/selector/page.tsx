@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import SelectorClient from './SelectorClient';
 
 export const metadata: Metadata = {
-  title: "AI Material Selector & Recommendation Engine | Materialpedia",
+  title: "AI Material Selector & Recommendation Engine | MaterialVerse",
   description: "Find the ideal material for your project based on structural application, target budget, durability requirements, and environmental parameters.",
   alternates: {
     canonical: `${SITE_URL}/selector`,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "AI Material Selector & Recommendation Engine | Materialpedia",
+    title: "AI Material Selector & Recommendation Engine | MaterialVerse",
     description: "Find the ideal material for your project based on structural application, target budget, durability requirements, and environmental parameters.",
     url: `${SITE_URL}/selector`,
     type: "website",

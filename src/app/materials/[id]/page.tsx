@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const material = materialsData.find((m) => m.id === id);
   if (!material) {
     return {
-      title: "Material Not Found | Materialpedia",
+      title: "Material Not Found | MaterialVerse",
     };
   }
 
-  const title = `${material.name} Properties, Standards & Guides | Materialpedia`;
+  const title = `${material.name} Properties, Standards & Guides | MaterialVerse`;
   const description = `${material.name} standard specifications. Lifespan: ${material.lifespan}, Price: ${material.priceEstimation}. Learn grades, pros/cons, and DIY maintenance guide.`;
 
   return {
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'article',
       url: `${SITE_URL}/materials/${id}`,
-      siteName: 'Materialpedia',
+      siteName: 'MaterialVerse',
     },
     twitter: {
       card: 'summary_large_image',

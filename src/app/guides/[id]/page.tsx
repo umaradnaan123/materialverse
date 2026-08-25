@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = articlesData.find((a) => a.id === id);
   if (!article) {
     return {
-      title: "Guide Not Found | Materialpedia",
+      title: "Guide Not Found | MaterialVerse",
     };
   }
 
-  const title = `${article.title} | Educational Guides | Materialpedia`;
+  const title = `${article.title} | Educational Guides | MaterialVerse`;
   const description = article.description;
 
   return {
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'article',
       url: `${SITE_URL}/guides/${id}`,
-      siteName: 'Materialpedia',
+      siteName: 'MaterialVerse',
     },
     twitter: {
       card: 'summary_large_image',

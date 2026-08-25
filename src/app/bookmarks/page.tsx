@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import BookmarksClient from './BookmarksClient';
 
 export const metadata: Metadata = {
-  title: "Bookmarked Materials | Materialpedia",
+  title: "Bookmarked Materials | MaterialVerse",
   description: "Your saved material profiles, specifications, pricing matrices, and guides.",
   alternates: {
     canonical: `${SITE_URL}/bookmarks`,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     follow: false,
   },
   openGraph: {
-    title: "Bookmarked Materials | Materialpedia",
+    title: "Bookmarked Materials | MaterialVerse",
     description: "Your saved material profiles, specifications, pricing matrices, and guides.",
     url: `${SITE_URL}/bookmarks`,
     type: "website",
@@ -27,7 +27,7 @@ export default function Page() {
     "@type": "WebPage",
     "name": "Bookmarked Materials",
     "url": `${SITE_URL}/bookmarks`,
-    "description": "User custom bookmarked materials watchlist on Materialpedia."
+    "description": "User custom bookmarked materials watchlist on MaterialVerse."
   };
 
   return (
@@ -37,7 +37,7 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <div className="sr-only">
-        <h1>Bookmarked Materials | Materialpedia</h1>
+        <h1>Bookmarked Materials | MaterialVerse</h1>
         <p>Your saved material profiles, specifications, pricing matrices, and guides.</p>
       </div>
       <BookmarksClient />

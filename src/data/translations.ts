@@ -81,7 +81,7 @@ export interface TranslationSchema {
 
 export const translations: Record<Language, TranslationSchema> = {
   en: {
-    brandName: "Materialpedia",
+    brandName: "MaterialVerse",
     searchPlaceholder: "Search 60+ materials (e.g. Cement, Silk, Solar panels)...",
     compareTab: "Compare Engine",
     calculatorTab: "Calculators",

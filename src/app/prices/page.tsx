@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import PricesClient from './PricesClient';
 
 export const metadata: Metadata = {
-  title: "Material Price Intelligence & Market Estimates | Materialpedia",
+  title: "Material Price Intelligence & Market Estimates | MaterialVerse",
   description: "Track price ranges, market estimates, GST taxes, labor costs, and cost intelligence databases for structural and finish materials.",
   alternates: {
     canonical: `${SITE_URL}/prices`,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Material Price Intelligence & Market Estimates | Materialpedia",
+    title: "Material Price Intelligence & Market Estimates | MaterialVerse",
     description: "Track price ranges, market estimates, GST taxes, labor costs, and cost intelligence databases for structural and finish materials.",
     url: `${SITE_URL}/prices`,
     type: "website",

@@ -15,11 +15,11 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "Materialpedia - The Encyclopedia of Materials",
-    template: "%s | Materialpedia"
+    default: "MaterialVerse - The Encyclopedia of Materials",
+    template: "%s | MaterialVerse"
   },
   description: "Wikipedia for Materials. Find standards, lifespans, price estimates, durability ratings, environmental impact, calculators, and comparison matrices for 60+ material categories.",
-  applicationName: "Materialpedia",
+  applicationName: "MaterialVerse",
   referrer: "origin-when-cross-origin",
   keywords: ["materials", "construction", "interior finishing", "electrical utilities", "calculators", "compare materials", "BIS standards", "quality standards"],
   authors: [{ name: "MaterialVerse Team" }],
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Materialpedia - The Encyclopedia of Materials",
+    title: "MaterialVerse - The Encyclopedia of Materials",
     description: "Wikipedia for Materials. Find standards, lifespans, price estimates, durability ratings, environmental impact, calculators, and comparison matrices for 60+ material categories.",
     url: SITE_URL,
-    siteName: "Materialpedia",
+    siteName: "MaterialVerse",
     locale: "en_US",
     type: "website",
     images: [
@@ -57,15 +57,15 @@ export const metadata: Metadata = {
         url: "/icon.png",
         width: 512,
         height: 512,
-        alt: "Materialpedia logo",
+        alt: "MaterialVerse logo",
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Materialpedia - The Encyclopedia of Materials",
+    title: "MaterialVerse - The Encyclopedia of Materials",
     description: "Wikipedia for Materials. Find standards, lifespans, price estimates, durability ratings, environmental impact, calculators, and comparison matrices for 60+ material categories.",
-    creator: "@materialpedia",
+    creator: "@materialverse",
     images: ["/icon.png"],
   },
   verification: {

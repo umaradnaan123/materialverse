@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node scripts/seo-audit.js && node scripts/validate-sitemap.js",
+    "postbuild": "node scripts/seo-audit.js && node scripts/validate-sitemap.js && node scripts/indexnow.js",
     "start": "next start",
     "lint": "eslint"
   },

@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import BrandsClient from './BrandsClient';
 
 export const metadata: Metadata = {
-  title: "Certified Brand Directory & Manufacturers | Materialpedia",
+  title: "Certified Brand Directory & Manufacturers | MaterialVerse",
   description: "Browse verified material brand directories, manufacturers, certifications, and compliance licenses across civil construction categories.",
   alternates: {
     canonical: `${SITE_URL}/brands`,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Certified Brand Directory & Manufacturers | Materialpedia",
+    title: "Certified Brand Directory & Manufacturers | MaterialVerse",
     description: "Browse verified material brand directories, manufacturers, certifications, and compliance licenses across civil construction categories.",
     url: `${SITE_URL}/brands`,
     type: "website",
@@ -37,7 +37,7 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <div className="sr-only">
-        <h1>Certified Brand Directory & Manufacturers | Materialpedia</h1>
+        <h1>Certified Brand Directory & Manufacturers | MaterialVerse</h1>
         <p>Browse verified material brand directories, manufacturers, certifications, and compliance licenses across civil construction categories.</p>
       </div>
       <BrandsClient />

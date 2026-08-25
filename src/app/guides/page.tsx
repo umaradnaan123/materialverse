@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import GuidesClient from './GuidesClient';
 
 export const metadata: Metadata = {
-  title: "Educational Installation & Buying Guides | Materialpedia",
+  title: "Educational Installation & Buying Guides | MaterialVerse",
   description: "Read professional walkthroughs, installation steps, and material procurement guidelines written by engineering specialists.",
   alternates: {
     canonical: `${SITE_URL}/guides`,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Educational Installation & Buying Guides | Materialpedia",
+    title: "Educational Installation & Buying Guides | MaterialVerse",
     description: "Read professional walkthroughs, installation steps, and material procurement guidelines written by engineering specialists.",
     url: `${SITE_URL}/guides`,
     type: "website",

@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import CompareClient from './CompareClient';
 
 export const metadata: Metadata = {
-  title: "Material Comparison Matrix | Materialpedia",
+  title: "Material Comparison Matrix | MaterialVerse",
   description: "Side-by-side technical comparison of 60+ materials. Compare density, lifespan, cost tiers, durability, and eco-scores.",
   alternates: {
     canonical: `${SITE_URL}/compare`,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Material Comparison Matrix | Materialpedia",
+    title: "Material Comparison Matrix | MaterialVerse",
     description: "Side-by-side technical comparison of 60+ materials. Compare density, lifespan, cost tiers, durability, and eco-scores.",
     url: `${SITE_URL}/compare`,
     type: "website",

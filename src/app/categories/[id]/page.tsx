@@ -23,11 +23,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = categoriesData.find((cat) => cat.id === id);
   if (!category) {
     return {
-      title: "Category Not Found | Materialpedia",
+      title: "Category Not Found | MaterialVerse",
     };
   }
 
-  const title = `${category.name}: Specifications, Materials & Standards | Materialpedia`;
+  const title = `${category.name}: Specifications, Materials & Standards | MaterialVerse`;
   const description = `${category.description} Explore subsectors, verified standards, and key engineering materials lists in the MaterialVerse database.`;
 
   return {
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'article',
       url: `${SITE_URL}/categories/${id}`,
-      siteName: 'Materialpedia',
+      siteName: 'MaterialVerse',
     },
     twitter: {
       card: 'summary_large_image',

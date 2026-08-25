@@ -20,10 +20,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const post = blogData.find((p) => p.id === id);
   if (!post) {
-    return { title: "Article Not Found | Materialpedia" };
+    return { title: "Article Not Found | MaterialVerse" };
   }
 
-  const title = `${post.title} | Materialpedia`;
+  const title = `${post.title} | MaterialVerse`;
   const description = post.description;
 
   return {
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'article',
       url: `${SITE_URL}/blog/${id}`,
-      siteName: 'Materialpedia',
+      siteName: 'MaterialVerse',
       authors: [post.author],
     },
     twitter: {

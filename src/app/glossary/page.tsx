@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import GlossaryClient from './GlossaryClient';
 
 export const metadata: Metadata = {
-  title: "Engineering Glossary & BIS Standards Reference | Materialpedia",
+  title: "Engineering Glossary & BIS Standards Reference | MaterialVerse",
   description: "Browse detailed engineering glossary terms and Bureau of Indian Standards (BIS) license specifications for raw, structural, and finish materials.",
   alternates: {
     canonical: `${SITE_URL}/glossary`,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Engineering Glossary & BIS Standards Reference | Materialpedia",
+    title: "Engineering Glossary & BIS Standards Reference | MaterialVerse",
     description: "Browse detailed engineering glossary terms and Bureau of Indian Standards (BIS) license specifications for raw, structural, and finish materials.",
     url: `${SITE_URL}/glossary`,
     type: "website",

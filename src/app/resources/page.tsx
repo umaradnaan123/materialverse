@@ -7,7 +7,7 @@ import { GraduationCap, ArrowRight, Download, FileText, Calendar } from 'lucide-
 import Breadcrumbs from '../../components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Engineering Study Materials & Lecture Notes Library | Materialpedia",
+  title: "Engineering Study Materials & Lecture Notes Library | MaterialVerse",
   description: "Browse free downloadable B.Tech/M.Tech lecture notes, competitive exam formula sheets, programming guidelines, and lab manuals.",
   alternates: {
     canonical: `${SITE_URL}/resources`,

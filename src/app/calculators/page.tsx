@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import CalculatorsClient from './CalculatorsClient';
 
 export const metadata: Metadata = {
-  title: "Material Quantity & Estimation Calculators | Materialpedia",
+  title: "Material Quantity & Estimation Calculators | MaterialVerse",
   description: "Calculate concrete, steel rebars, brick masonry, plastering, plumbing pipes, and tile layout counts instantly with engineering grade estimators.",
   alternates: {
     canonical: `${SITE_URL}/calculators`,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Material Quantity & Estimation Calculators | Materialpedia",
+    title: "Material Quantity & Estimation Calculators | MaterialVerse",
     description: "Calculate concrete, steel rebars, brick masonry, plastering, plumbing pipes, and tile layout counts instantly with engineering grade estimators.",
     url: `${SITE_URL}/calculators`,
     type: "website",

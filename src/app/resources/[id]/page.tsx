@@ -20,10 +20,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const resource = resourcesData.find((r) => r.id === id);
   if (!resource) {
-    return { title: "Resource Not Found | Materialpedia" };
+    return { title: "Resource Not Found | MaterialVerse" };
   }
 
-  const title = `${resource.title} - Download Free PDF Notes | Materialpedia`;
+  const title = `${resource.title} - Download Free PDF Notes | MaterialVerse`;
   const description = `${resource.description} Sourced and reviewed by ${resource.author}. Available formats: ${resource.format}.`;
 
   return {
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'article',
       url: `${SITE_URL}/resources/${id}`,
-      siteName: 'Materialpedia',
+      siteName: 'MaterialVerse',
     },
     twitter: {
       card: 'summary_large_image',
