@@ -69,10 +69,10 @@ export const metadata: Metadata = {
     images: ["/icon.png"],
   },
   verification: {
-    google: "3HnqK-VdYSw0Gvki7SZizE2J_mdws5GCxxGC8AmkTgA",
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "3HnqK-VdYSw0Gvki7SZizE2J_mdws5GCxxGC8AmkTgA",
     other: {
-      "msvalidate.01": "09C7A42C92C510395B16F0393F057D6C",
-      "yandex-verification": "8d0d5adc59a12b92",
+      "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION || "09C7A42C92C510395B16F0393F057D6C",
+      "yandex-verification": process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || "8d0d5adc59a12b92",
     },
   },
 };
