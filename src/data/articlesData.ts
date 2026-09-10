@@ -6052,5 +6052,556 @@ export const articlesData: Article[] = [
     ],
     "calculatorLink": "house-construction",
     "comparisonTable": null
+  },
+{
+  "id": "how-to-identify-materials",
+  "title": "How to Identify Materials: Complete Field Guide to Metals, Plastics, Ceramics & Composites",
+  "description": "Learn how to identify unknown materials using visual cues, density tests, magnetism, scratch hardness, thermal response, and sound inspection.",
+  "category": "Engineering & Material Science",
+  "readingTime": "14 min read",
+  "author": "MaterialVerse Technical Panel",
+  "lastUpdated": "September 2026",
+  "sections": [
+    {
+      "title": "1. Visual Inspection & Initial Surface Characteristics",
+      "body": "When encountering an unknown engineering specimen, systematic observation provides the first clues. Begin by examining surface luster: metallic lusters reflect light sharply with characteristic metallic tints (e.g. copper's reddish hue, brass's gold, aluminum's dull silver, or mild steel's greyish tone). Examine the grain texture and porosity: ceramics and unpolished stones show microscopic grain boundaries, whereas polymers (plastics) display continuous molded flow lines, ejection pin marks, or flash ridges along mold seams. Wood features cellular grain rings and pores, while composite materials show visible fiber weaves (like carbon fiber cross-hatch or glass fiber strands embedded in resin matrices)."
+    },
+    {
+      "title": "2. Density, Weight Estimation & Magnetism Testing",
+      "body": "Heft and relative density immediately narrow down material classifications. Metals typically range from 2.7 g/cm³ (lightweight aluminum alloys) to 7.85 g/cm³ (carbon and alloy steels) up to 8.9 g/cm³ (copper). In contrast, common engineering plastics (polypropylene, polyethylene) possess densities below 1.0 g/cm³, meaning they float in fresh water. High-density plastics like PVC (1.38 g/cm³) and PTFE (2.2 g/cm³) sink rapidly. Magnetism testing using a strong neodymium magnet is indispensable: ferrous carbon steels and ferritic stainless steels strongly attract magnets, austenitic stainless steels (like 304 and 316) show little to no magnetic attraction, and non-ferrous metals (copper, aluminum, zinc, titanium) exhibit zero magnetism."
+    },
+    {
+      "title": "3. Scratch Hardness (Mohs Scale) & Acoustic Sound Tap Testing",
+      "body": "Scratch testing evaluates relative hardness across standard scales. A fingernail (Mohs 2.5) easily scratches pure gypsum, talc, and soft polymers. A standard copper penny (Mohs 3.5) scratches aluminum and brass. A hardened steel knife blade (Mohs 5.5) will scratch mild steel, ordinary glass, and fluorite, but cannot scratch quartz, granite, or vitrified ceramics (Mohs 6.5–7.0). Acoustic sound testing further clarifies internal structure: tapping a specimen against a hard surface produces clear resonance in dense vitrified ceramics and hardened metals, whereas polymers, woods, and composites produce a low, highly dampened thud due to internal vibration absorption."
+    },
+    {
+      "title": "4. Thermal Conductivity & Flame Test (With Field Safety Warnings)",
+      "body": "Thermal conductivity is instantly perceived through touch: metals draw heat away from fingers rapidly, feeling distinctly cold at ambient room temperature, whereas plastics, rubbers, and woods act as thermal insulators and feel neutral or warm. In controlled laboratory environments under proper ventilation, a microscopic bead flame test reveals polymer chemistries: Polyethylene (PE) burns with a blue-yellow flame producing a paraffin candle odor; PVC self-extinguishes upon removal from flame and gives off sharp hydrochloric acid vapor; Acrylic burns cleanly with a sweet fruity scent. CAUTION: Never inhale burn vapors and perform burn tests only under certified laboratory fume extraction."
+    },
+    {
+      "title": "5. Comprehensive Material Category Identification Matrix",
+      "body": "By synthesizing color, weight, magnetism, scratch response, and acoustic signature, engineers can rapidly pinpoint specimen families. Consult the comparison matrix below for typical benchmark values. When precise identification is legally or structurally mandated, specimens should undergo laboratory Fourier Transform Infrared Spectroscopy (FTIR) for polymers, or Optical Emission Spectroscopy (OES) and X-ray Fluorescence (XRF) for metallic alloys."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How can I quickly differentiate aluminum from stainless steel in the field?",
+      "a": "Check weight and magnetism: aluminum is approximately one-third the weight of stainless steel (density ~2.7 g/cm³ vs ~7.9 g/cm³). Additionally, austenitic stainless steel is significantly harder and will resist scratching with a copper coin or mild steel key, whereas aluminum can be indented."
+    },
+    {
+      "q": "What simple field test differentiates PVC from Polyethylene (PE)?",
+      "a": "A water buoyancy test is the fastest non-destructive check: Polyethylene (density 0.92–0.96 g/cm³) floats in plain water, whereas rigid PVC (density 1.35–1.45 g/cm³) immediately sinks to the bottom."
+    },
+    {
+      "q": "Can composites like carbon fiber be identified without lab instruments?",
+      "a": "Yes. Carbon fiber composites exhibit distinct woven black graphite fiber mesh beneath a clear polymer gloss, possess extremely light weight with very high stiffness, and produce a sharp click rather than a metallic ring when tapped."
+    }
+  ],
+  "seoKeywords": [
+    "what material is this",
+    "how to identify materials",
+    "material identification field guide",
+    "metal vs plastic identification",
+    "unknown material test methods",
+    "mohs hardness scratch test"
+  ],
+  "calculatorLink": null,
+  "comparisonTable": {
+    "headers": [
+      "Material Class",
+      "Density (g/cm³)",
+      "Tactile Feel",
+      "Magnetism",
+      "Key Identification Clue"
+    ],
+    "rows": [
+      [
+        "Carbon Steel",
+        "7.85",
+        "Cold, dense",
+        "Strongly Magnetic",
+        "Attracts magnet, high spark trail on grinding"
+      ],
+      [
+        "Aluminum",
+        "2.70",
+        "Cold, very light",
+        "Non-Magnetic",
+        "Silvery-grey, light heft, non-sparking"
+      ],
+      [
+        "Ceramic / Porcelain",
+        "2.3 - 2.5",
+        "Cold, hard",
+        "Non-Magnetic",
+        "Glassy/stony fracture, high Mohs hardness (6-7)"
+      ],
+      [
+        "Polyethylene (PE)",
+        "0.92 - 0.96",
+        "Waxy, warm",
+        "Non-Magnetic",
+        "Floats in water, easily scratched with fingernail"
+      ],
+      [
+        "PVC (Rigid)",
+        "1.38",
+        "Smooth, rigid",
+        "Non-Magnetic",
+        "Sinks in water, self-extinguishes in flame"
+      ],
+      [
+        "Carbon Fiber Composite",
+        "1.55",
+        "Slightly warm, rigid",
+        "Non-Magnetic",
+        "Visible black woven fiber lattice, ultra-high rigidity"
+      ]
+    ]
   }
+},
+{
+  "id": "bamboo-scaffolding-guide",
+  "title": "Bamboo Scaffolding: Engineering Properties, Advantages, Safety & High-Rise Uses",
+  "description": "Explore bamboo scaffolding engineering: tensile-to-weight ratios, safety inspection codes, nylon lashing techniques, and structural comparison with steel tubular scaffolding.",
+  "category": "Construction Materials",
+  "readingTime": "12 min read",
+  "author": "MaterialVerse Technical Panel",
+  "lastUpdated": "September 2026",
+  "sections": [
+    {
+      "title": "1. Structural Engineering Properties of Scaffolding Bamboo",
+      "body": "Bamboo scaffolding is one of the most remarkable engineering traditions in global civil construction, heavily utilized in high-density skylines like Hong Kong, southern China, and parts of Southeast Asia. Two primary bamboo species are specified in structural scaffolding: Kao Jue (Bambusa pervariabilis) with typical outer diameters of 40mm to 50mm used for internal bracing, and Mao Jue (Phyllostachys edulis) with diameters exceeding 75mm used for primary load-bearing standards and ledgers. Structurally, mature bamboo culms (3 to 5 years old) exhibit tensile strengths along the grain of 140 to 220 MPa—comparable to mild structural steel when measured per unit weight—owing to dense longitudinal cellulose fiber bundles concentrated near the outer culm rind."
+    },
+    {
+      "title": "2. Key Advantages: Strength-to-Weight, Eco-Footprint & Skyline Agility",
+      "body": "The engineering benefits of bamboo scaffolding over conventional tubular modular steel are compelling. First, bamboo is approximately 6 to 8 times lighter than steel frameworks of equivalent volume, drastically reducing the dead weight imposed on building cantilevers, cornices, and foundation soil. Second, bamboo can be readily cut with hand saws and tailored to complex curved facades, heritage restorations, and tight urban alleys where rigid prefabricated steel couplings cannot fit. Third, bamboo is a rapidly renewable carbon-negative biological resource, sequestering atmospheric CO2 during growth. Once dismantled, discarded culms can be recycled into fiberboard or biomass mulch without landfill toxicity."
+    },
+    {
+      "title": "3. Construction Techniques & Nylon Strip Lashing Standards",
+      "body": "Unlike metallic scaffolding assembled with bolt clamps, bamboo scaffolding relies on flexible tied joints. Historically tied with rattan bark strips, modern practice exclusively mandates UV-stabilized nylon lashing strips (typically 5mm to 6mm wide, 0.5mm thick). Scaffolders execute specialized friction knots around intersecting standards, ledgers, and diagonal braces. This lash-and-friction method allows microscopic joint rotation during typhoons, dampening wind buffeting loads rather than snapping under rigid shear stress. Standards are placed at center-to-center spacings between 1.0m and 1.3m, with horizontal ledgers spaced at vertical intervals of 1.8m to 2.0m to create safe working lifts."
+    },
+    {
+      "title": "4. Bamboo Scaffolding vs Tubular Steel Scaffolding Matrix",
+      "body": "While bamboo excels in versatility, weight, and low procurement cost, tubular steel scaffolding offers superior standardized load predictability, fire resistance, and unlimited reuse cycles. In modern commercial construction, hybrid systems frequently pair steel cantilever brackets at the tower podium with multiple upper tiers of bamboo scaffolding to capture both structural stability and erecting speed. See the comparative metrics below."
+    },
+    {
+      "title": "5. Safety Protocols, Weather Audits & Mandatory Maintenance",
+      "body": "Strict safety codes govern bamboo scaffolding. Before erection, culms must be seasoned to moisture contents between 15% and 20% to avoid premature fungal rotting or shrinkage loosening at lashed joints. Inspections are legally required every 14 days and immediately following any severe storm, typhoon signal, or seismic tremor. Damaged culms showing longitudinal splitting, fungal spores, or insect boreholes must be cut out and reinforced with sister culm lashings immediately. Workers must always utilize independent safety lifelines, safety harnesses, and catch-netting beneath platforms."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why is bamboo scaffolding used even for 60+ story high-rise skyscrapers?",
+      "a": "Bamboo's incredible strength-to-weight ratio allows rapid erection without heavy crane mobilization. Additionally, bamboo scaffolds absorb high-altitude typhoon wind shear through flexible joint dissipation better than brittle rigid couplings."
+    },
+    {
+      "q": "How does bamboo tensile strength compare to mild steel?",
+      "a": "On a direct cross-sectional basis, bamboo reaches 140–220 MPa compared to mild steel's 250–400 MPa. However, because bamboo's density is only ~0.65 g/cm³ compared to steel's 7.85 g/cm³, bamboo's strength-to-weight ratio is significantly higher."
+    },
+    {
+      "q": "What is the typical working lifespan of bamboo scaffolding culms?",
+      "a": "A high-grade Mao Jue culm can typically be reused across 2 to 4 project cycles over a span of 12 to 18 months, provided it is kept off wet soil and protected from moisture rot between cycles."
+    }
+  ],
+  "seoKeywords": [
+    "bamboo scaffolding",
+    "bamboo scaffolding advantages",
+    "bamboo scaffolding uses",
+    "bamboo scaffolding safety",
+    "bamboo vs steel scaffolding"
+  ],
+  "calculatorLink": null,
+  "comparisonTable": {
+    "headers": [
+      "Engineering Parameter",
+      "Bamboo Scaffolding",
+      "Tubular Steel Scaffolding"
+    ],
+    "rows": [
+      [
+        "Material Density",
+        "0.60 - 0.75 g/cm³",
+        "7.85 g/cm³"
+      ],
+      [
+        "Erection Speed",
+        "Extremely Rapid (Hand cut & tied)",
+        "Moderate (Bolt clamping & torque wrenching)"
+      ],
+      [
+        "Adaptability to Irregular Facades",
+        "High (Can be cut & customized at any angle)",
+        "Moderate (Restricted to standard modular lengths)"
+      ],
+      [
+        "Fire Rating",
+        "Combustible (Requires fire-retardant mesh)",
+        "Non-Combustible (Class A rating)"
+      ],
+      [
+        "Material Cost Index",
+        "Low / Budget-friendly",
+        "High capital investment"
+      ],
+      [
+        "Environmental Profile",
+        "Carbon-negative renewable biological culm",
+        "Energy-intensive virgin/recycled steel"
+      ]
+    ]
+  }
+},
+{
+  "id": "aac-blocks-vs-red-bricks",
+  "title": "AAC Blocks vs Red Bricks: Cost, Strength, Weight & Thermal Comparison",
+  "description": "Compare Autoclaved Aerated Concrete (AAC) blocks and traditional clay red bricks across compressive strength, dead weight load, mortar consumption, thermal insulation, and project costs.",
+  "category": "Masonry & Structural",
+  "readingTime": "11 min read",
+  "author": "MaterialVerse Technical Panel",
+  "lastUpdated": "September 2026",
+  "sections": [
+    {
+      "title": "1. Composition & Manufacturing Differences",
+      "body": "Autoclaved Aerated Concrete (AAC) blocks are lightweight, precast building elements fabricated from quartz sand or fly ash, calcined gypsum, lime, Portland cement, water, and aluminum powder foaming agent. Autoclaving under 12 bars of high-pressure steam induces tobermorite crystal formation. In contrast, traditional red bricks are molded from natural alluvial clay, sundried, and fired in traditional kilns at 900°C to 1100°C, a process that consumes fertile topsoil and emits substantial carbon dioxide."
+    },
+    {
+      "title": "2. Structural Dead Weight & Earthquake Performance",
+      "body": "The primary structural engineering advantage of AAC blocks is weight reduction. AAC blocks possess a dry density of 550 to 650 kg/m³, which is nearly one-third the density of solid red clay bricks (1800 to 2000 kg/m³). In high-rise RCC framed structures, utilizing AAC blocks reduces the dead load of partition walls by up to 50%, enabling structural designers to optimize beam dimensions, column steel reinforcement, and foundation footings, yielding up to 15% overall steel savings."
+    },
+    {
+      "title": "3. Thermal Conductivity & Energy Efficiency",
+      "body": "The closed-cell microscopic aeration of AAC blocks provides superior thermal insulation. With a thermal conductivity (k-value) of 0.16 to 0.18 W/m·K, AAC blocks insulate up to three times better than conventional red clay bricks (0.81 W/m·K). This lower thermal transfer dramatically reduces air conditioning loads in tropical climates and heating loads in cold regions, yielding measurable long-term utility savings."
+    },
+    {
+      "title": "4. Mortar Consumption, Speed of Construction & Plastering",
+      "body": "Due to their large dimensions (typically 600mm x 200mm x 100/150/200mm), one AAC block replaces approximately 8 to 9 standard clay bricks. This reduces the number of mortar joints by 75%. Furthermore, AAC blocks are laid with thin-bed polymer-modified adhesive mortars (2–3mm thickness) rather than 12–15mm cement-sand mortar, eliminating on-site sand screening and curing downtime. The razor-sharp dimensional accuracy of AAC allows direct thin-coat gypsum plastering, bypassing thick cement plaster coats."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is AAC block stronger than standard red brick?",
+      "a": "Red bricks generally show compressive strengths between 3.5 and 7.5 MPa (with Class 1 reaching 10 MPa), while standard AAC blocks range between 3.0 and 4.5 MPa. However, in framed structures where walls carry no structural slab loads, AAC's strength is more than adequate while offering huge dead-weight savings."
+    },
+    {
+      "q": "Do AAC blocks suffer from hairline plaster cracks?",
+      "a": "AAC blocks have higher drying shrinkage than fired clay. Hairline cracking can occur if blocks are soaked in water prior to laying or if polymer mesh is omitted at RCC-masonry junctions. Using thin-bed dry adhesive and fiber mesh eliminates this issue."
+    },
+    {
+      "q": "Which is more cost-effective overall: AAC or red brick?",
+      "a": "While individual AAC blocks may carry a higher unit purchase cost, the aggregate project cost is 10% to 20% lower when factoring in 75% less joint mortar, reduced foundation steel, eliminated thick plaster, and 3x faster masonry speed."
+    }
+  ],
+  "seoKeywords": [
+    "aac blocks vs red bricks",
+    "aac block vs brick cost",
+    "aac blocks vs clay bricks comparison",
+    "which is better aac block or red brick",
+    "aac block strength vs red brick"
+  ],
+  "calculatorLink": "brick-calculator",
+  "comparisonTable": {
+    "headers": [
+      "Performance Parameter",
+      "AAC Blocks",
+      "Traditional Red Clay Bricks"
+    ],
+    "rows": [
+      [
+        "Density / Dead Weight",
+        "550 - 650 kg/m³ (Lightweight)",
+        "1800 - 2000 kg/m³ (Heavy)"
+      ],
+      [
+        "Thermal Conductivity (k)",
+        "0.16 - 0.18 W/m·K (High insulation)",
+        "0.81 - 0.85 W/m·K (Moderate insulation)"
+      ],
+      [
+        "Mortar Joint Thickness",
+        "2 - 3 mm (Thin-bed adhesive)",
+        "10 - 15 mm (Cement-sand mortar)"
+      ],
+      [
+        "Fire Resistance",
+        "Up to 4 hours (Non-combustible)",
+        "Up to 2 hours"
+      ],
+      [
+        "Dimensional Accuracy",
+        "High (Factory wire-cut)",
+        "Moderate to poor (Kiln shrinkage variations)"
+      ],
+      [
+        "Environmental Impact",
+        "Green (Utilizes fly ash byproduct)",
+        "High (Consumes topsoil & kiln coal)"
+      ]
+    ]
+  }
+},
+{
+  "id": "pvc-vs-cpvc-pipes",
+  "title": "PVC vs CPVC Pipes: Temperature, Pressure, Cost & Plumbing Applications",
+  "description": "Examine key differences between PVC and chlorinated CPVC pipes. Compare operating temperatures, chemical resistance, pressure ratings, and potable water safety.",
+  "category": "Plumbing",
+  "readingTime": "10 min read",
+  "author": "MaterialVerse Technical Panel",
+  "lastUpdated": "September 2026",
+  "sections": [
+    {
+      "title": "1. Molecular Structure & Chlorination Chemistry",
+      "body": "Polyvinyl Chloride (PVC) and Chlorinated Polyvinyl Chloride (CPVC) are two ubiquitous thermoplastic piping systems. The defining difference lies in CPVC's chemical post-chlorination: standard PVC contains approximately 56.7% chlorine by weight, while CPVC undergoes a free-radical chlorination reaction that elevates chlorine content to approximately 67%. This extra chlorine atomic shielding stabilizes the polymer backbone, drastically improving thermal deflection thresholds and chemical resistance."
+    },
+    {
+      "title": "2. Working Temperature Limits: Hot vs Cold Water Handling",
+      "body": "The single most critical plumbing distinction is temperature tolerance. Standard rigid PVC has a maximum continuous operating temperature rating of 60°C (140°F). Exceeding this causes PVC to soften, lose pressure rating, and warp. Consequently, PVC is restricted to cold-water supply, irrigation, and drainage systems. CPVC, by contrast, handles continuous operating temperatures up to 93°C (200°F), making it the gold standard for domestic hot and cold potable water distribution, solar water heater connections, and industrial hot chemical lines."
+    },
+    {
+      "title": "3. Pressure Ratings & Sizing Standards (CTS vs IPS)",
+      "body": "PVC and CPVC follow different sizing conventions: PVC pipe dimensions are specified in Iron Pipe Size (IPS), matching standard nominal pipe outer diameters. Residential CPVC is predominantly fabricated in Copper Tube Size (CTS), which mirrors traditional copper pipe sizing. Both systems offer Schedule 40 and Schedule 80 wall thicknesses, with CPVC maintaining significantly higher burst pressure ratings at elevated operating temperatures."
+    },
+    {
+      "title": "4. Solvent Cement Joining & Installation Compatibility",
+      "body": "Both systems utilize two-step solvent welding (primer + cement) that chemically fuses pipe and fitting into a monolithic joint. However, PVC solvent cement MUST NEVER be used on CPVC pipes: CPVC requires specialized high-viscosity, high-temperature solvent cements (typically certified to ASTM F493) formulated to dissolve the chlorinated polymer structure."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I use PVC pipes for hot water plumbing?",
+      "a": "No. PVC cannot handle water above 60°C (140°F). Running hot water through PVC will cause pipe softening, pressure rupture, joint leaks, and potential leaching of stabilizers. Use CPVC or PEX for hot water."
+    },
+    {
+      "q": "Why is CPVC more expensive than PVC?",
+      "a": "CPVC requires an additional chlorination chemical manufacturing process, specialized raw resin additives, and tighter quality control standards to achieve high temperature and pressure certifications."
+    },
+    {
+      "q": "Can PVC and CPVC pipes be joined directly together?",
+      "a": "Direct solvent welding between PVC and CPVC is not code-compliant. They must be joined using threaded brass-to-plastic transition fittings or approved mechanical compression couplings."
+    }
+  ],
+  "seoKeywords": [
+    "pvc vs cpvc pipes",
+    "difference between pvc and cpvc",
+    "can cpvc be used for hot water",
+    "pvc vs cpvc temperature rating",
+    "plumbing pipe selection guide"
+  ],
+  "calculatorLink": null,
+  "comparisonTable": {
+    "headers": [
+      "Specification",
+      "PVC (Polyvinyl Chloride)",
+      "CPVC (Chlorinated PVC)"
+    ],
+    "rows": [
+      [
+        "Max Continuous Temp",
+        "60°C (140°F)",
+        "93°C (200°F)"
+      ],
+      [
+        "Hot Water Suitability",
+        "Unsuitable (Cold water only)",
+        "Fully Certified for Hot & Cold Potable Lines"
+      ],
+      [
+        "Sizing Standard",
+        "Nominal Iron Pipe Size (IPS)",
+        "Copper Tube Size (CTS) & IPS"
+      ],
+      [
+        "Solvent Cement Type",
+        "Standard PVC Solvent Cement",
+        "Specialized High-Temp CPVC Cement (ASTM F493)"
+      ],
+      [
+        "Typical Applications",
+        "Drainage, sewage, irrigation, cold water mains",
+        "Interior residential hot/cold water, solar lines"
+      ],
+      [
+        "Cost Index",
+        "Budget / Economical",
+        "Mid to Premium (~30% to 50% higher than PVC)"
+      ]
+    ]
+  }
+},
+{
+  "id": "mdf-vs-plywood",
+  "title": "MDF vs Plywood: Strength, Moisture Resistance, Cost & Furniture Uses",
+  "description": "Compare Medium-Density Fiberboard (MDF) and structural plywood. Understand screw holding capacity, water resistance, warping risks, and woodworking applications.",
+  "category": "Wood & Interior",
+  "readingTime": "11 min read",
+  "author": "MaterialVerse Technical Panel",
+  "lastUpdated": "September 2026",
+  "sections": [
+    {
+      "title": "1. Core Construction & Manufacturing Methods",
+      "body": "Plywood and Medium-Density Fiberboard (MDF) are the two core engineered wood substrates used in interior joinery. Plywood is manufactured by peeling continuous thin wood veneers from rotating logs, cross-laminating adjacent plies at 90-degree grain angles with synthetic resin (phenol-formaldehyde for BWR/BWP marine grades), and pressing under intense heat. This alternating cross-grain grain structure gives plywood isotropic structural tensile strength. MDF, on the other hand, is made by breaking down hardwood/softwood residuals into microscopic wood fibers, combining with wax and resin binders, and pressing into uniform, grain-free flat panels."
+    },
+    {
+      "title": "2. Structural Load Bearing & Screw Holding Capacity",
+      "body": "Plywood is vastly superior for structural load-bearing applications. The cross-laminated grain layers firmly anchor wood screw threads, resisting pull-out forces even under sustained mechanical vibrations. MDF lacks continuous wood fibers; while it holds screws well into its broad face, screws driven into its edges are vulnerable to splitting unless pilot holes are meticulously drilled and specialized twin-fast coarse thread screws are used. For heavy-span bookshelf shelving or bed frames, MDF will creep and sag under continuous load, whereas 18mm plywood stays rigid."
+    },
+    {
+      "title": "3. Moisture Tolerance & Swelling Behavior",
+      "body": "Moisture resistance is a major differentiator. Marine or Boiling Water Resistant (BWR/BWP) plywood withstands high-humidity zones like kitchen cabinets and bathroom vanities without structural delamination. Standard MDF acts like a sponge when exposed to standing water: its wood fibers swell irreversibly and crumble. Even High-Density Moisture-Resistant (HDMR) green boards, while far better than standard MDF, cannot match the water submersion endurance of marine-grade plywood."
+    },
+    {
+      "title": "4. Surface Finishing, Painting & CNC Routing Precision",
+      "body": "MDF is the uncontested winner for paint finishes and intricate decorative milling. Lacking knots, grain voids, or rough surface textures, MDF provides a glass-smooth substrate ideal for PU (polyurethane) automotive-grade paint finishes, acrylic lamination, and 3D CNC jali cutting. Plywood surfaces feature natural grain telegraphing, occasional surface voids, and rough edges that require edge-banding tapes or solid wood lippings before painting."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Which is better for kitchen cabinets: plywood or MDF?",
+      "a": "For cabinet carcasses (the internal boxes carrying sink plumbing and heavy stone countertops), BWR/BWP plywood is strongly recommended for moisture safety and strength. For painted exterior cabinet shutters and routed doors, MDF or HDMR provides the smoothest paint finish."
+    },
+    {
+      "q": "Does MDF sag more than plywood on wide shelves?",
+      "a": "Yes. MDF has lower stiffness and a lower modulus of elasticity than plywood. For spans exceeding 750mm without center supports, MDF shelves will permanently bow under heavy books."
+    },
+    {
+      "q": "Is MDF cheaper than commercial plywood?",
+      "a": "Yes. Standard interior MDF is typically 30% to 50% cheaper than commercial grade (MR) plywood and less than half the cost of premium calibrated BWP marine plywood."
+    }
+  ],
+  "seoKeywords": [
+    "mdf vs plywood",
+    "difference between mdf and plywood",
+    "which is stronger mdf or plywood",
+    "mdf vs plywood for kitchen cabinets",
+    "wood selection for interior furniture"
+  ],
+  "calculatorLink": null,
+  "comparisonTable": {
+    "headers": [
+      "Characteristic",
+      "Plywood (Commercial / Marine)",
+      "Medium-Density Fiberboard (MDF)"
+    ],
+    "rows": [
+      [
+        "Structural Composition",
+        "Cross-laminated continuous wood veneers",
+        "Homogeneous compressed wood fibers with resin"
+      ],
+      [
+        "Load Bearing / Sag Resistance",
+        "High (Ideal for spans, bed frames, cabinets)",
+        "Moderate to Low (Prone to sagging under heavy spans)"
+      ],
+      [
+        "Moisture Resistance",
+        "High (BWP/Marine grades tolerate water)",
+        "Poor (Standard MDF swells irreversibly in water)"
+      ],
+      [
+        "Edge Screw Holding",
+        "High (Wood grain locks screw threads)",
+        "Moderate (Can split edges without pilot holes)"
+      ],
+      [
+        "Surface Smoothness for Paint",
+        "Moderate (Wood grain can telegraph)",
+        "Ultra-Smooth (Perfect for PU paints and CNC milling)"
+      ],
+      [
+        "Cost Index",
+        "Mid to High (BWP grade)",
+        "Economical to Mid (~30-50% lower than plywood)"
+      ]
+    ]
+  }
+},
+{
+  "id": "granite-vs-marble",
+  "title": "Granite vs Marble Flooring & Countertops: Durability, Porosity & Cost Comparison",
+  "description": "Compare natural granite and metamorphic marble for kitchen countertops and flooring. Learn differences in Mohs hardness, acid resistance, sealing schedules, and pricing.",
+  "category": "Interior & Finishing",
+  "readingTime": "12 min read",
+  "author": "MaterialVerse Technical Panel",
+  "lastUpdated": "September 2026",
+  "sections": [
+    {
+      "title": "1. Geological Origins & Mineralogical Composition",
+      "body": "Granite and marble are both prestigious natural stones, but their geological origins dictate completely different engineering characteristics. Granite is an intrusive igneous rock forged deep within the Earth's crust as silica-rich magma slowly cools under extreme pressure. It is predominantly composed of quartz (hardness 7), feldspar (hardness 6), and mica minerals. Marble, in contrast, is a metamorphic rock formed when sedimentary carbonate rocks (chiefly limestone or dolomite) undergo intense tectonic heat and pressure, recrystallizing into a dense interlocking matrix of calcite or dolomite."
+    },
+    {
+      "title": "2. Hardness, Scratch Resistance & Wear Durability",
+      "body": "Granite is substantially harder and more scratch-resistant than marble. On the Mohs hardness scale, granite rates between 6 and 7, meaning standard kitchen steel blades (Mohs 5.5) cannot scratch a polished granite surface. Marble rates between 3 and 4 on the Mohs scale; dragging cast iron pans, ceramic mugs, or sandy footwear across a marble floor will leave visible abrasive scratches over time. For heavy foot-traffic flooring and commercial foyers, granite retains its mirror gloss far longer without periodic repolishing."
+    },
+    {
+      "title": "3. Porosity, Acid Etching & Chemical Reactivity",
+      "body": "Chemical vulnerability is the critical dividing line for kitchen countertop selection. Because marble is composed of calcium carbonate (calcite), it reacts chemically with acidic substances. Spilling lemon juice, vinegar, tomato sauce, or carbonated soda on marble dissolves the surface calcite crystals, leaving a permanent dull, chalky patch known as 'acid etching' that cannot be cleaned off with soap. Granite is silica-based and chemically inert to common kitchen acids. While both stones are porous and require penetrating silicone sealers, sealed granite provides near-zero staining risk compared to delicate marble."
+    },
+    {
+      "title": "4. Aesthetic Elegance, Veining & Luxury Applications",
+      "body": "Despite granite's physical durability, marble remains the timeless symbol of interior architectural luxury. Renowned for its soft, luminous translucent depth and organic fluid veining patterns (such as Italian Carrara, Calacatta, and Indian Makrana), marble creates unmatched visual grandeur in luxury bathroom vanities, fireplace surrounds, wall cladding, and residential living rooms where acid exposure is minimal."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why is granite preferred over marble for kitchen countertops?",
+      "a": "Granite resists scratches from kitchen knives, withstands hot pans directly from the stove, and does not etch or stain when exposed to everyday acidic cooking liquids like lemon, vinegar, or wine."
+    },
+    {
+      "q": "Does marble require more maintenance than granite?",
+      "a": "Yes. Marble requires resealing every 6 to 12 months with a fluoropolymer penetrating sealer, immediate wiping of spills, and cleaning only with pH-neutral stone cleaners. Granite typically requires resealing once every 2 to 3 years."
+    },
+    {
+      "q": "Can marble be used for bathroom vanity countertops?",
+      "a": "Yes, provided acidic toiletries (like AHA facial peels and toilet cleaners) are avoided and the stone is kept sealed. Marble adds exceptional luxury to bathroom walls and vanity tops."
+    }
+  ],
+  "seoKeywords": [
+    "granite vs marble",
+    "granite vs marble countertops",
+    "difference between marble and granite",
+    "which is better granite or marble for kitchen",
+    "granite vs marble cost and maintenance"
+  ],
+  "calculatorLink": null,
+  "comparisonTable": {
+    "headers": [
+      "Comparison Criterion",
+      "Natural Granite",
+      "Natural Marble"
+    ],
+    "rows": [
+      [
+        "Geological Classification",
+        "Igneous (Intrusive magma crystallization)",
+        "Metamorphic (Recrystallized limestone / calcite)"
+      ],
+      [
+        "Mohs Hardness Scale",
+        "6.0 - 7.0 (Very Hard, Scratch-Proof)",
+        "3.0 - 4.0 (Soft, Prone to scratching)"
+      ],
+      [
+        "Acid Resistance",
+        "Extremely High (Inert to lemon, vinegar)",
+        "Very Low (Reacts instantly with acids, causing etch marks)"
+      ],
+      [
+        "Heat Tolerance",
+        "Exceptional (Withstands hot pans up to 250°C)",
+        "Moderate (Thermal shock can discolor or crack)"
+      ],
+      [
+        "Sealing Frequency",
+        "Once every 2 - 3 years",
+        "Every 6 - 12 months"
+      ],
+      [
+        "Ideal Applications",
+        "Kitchen countertops, heavy-traffic floors, outdoor steps",
+        "Luxury living room flooring, bathroom vanities, wall cladding"
+      ]
+    ]
+  }
+}
 ];

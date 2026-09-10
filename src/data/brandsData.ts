@@ -1337,57 +1337,69 @@ export const brandsData: Brand[] = [
       }
     ]
   },
-  {
-    "id": "kajaria-ceramics",
-    "name": "Kajaria Ceramics",
-    "logo": "🧱",
-    "categories": [
-      "Tiles & Flooring"
-    ],
-    "origin": "India",
-    "established": 1988,
-    "headquarters": "New Delhi",
-    "priceSegment": "Mid",
-    "certifications": [
-      "IS 15622",
-      "CE Certified",
-      "ISO 9001"
-    ],
-    "products": [
-      "Kajaria Eternity Glazed Vitrified Tiles",
-      "Kajaria Ceramic Wall Tiles",
-      "Polished Vitrified Tiles (PVT)"
-    ],
-    "applications": [
-      "Living Room Floors",
-      "Bathroom Walls",
-      "Kitchen Backsplash"
-    ],
-    "advantages": [
-      "Huge design catalog",
-      "Extremely low water absorption (<0.05% on vitrified)",
-      "Scratch resistant surface"
-    ],
-    "limitations": [
-      "Higher fragility in transit of large slab sizes"
-    ],
-    "website": "https://www.kajariaceramics.com",
-    "relatedBrands": [
-      "somany-ceramics",
-      "johnson-tiles"
-    ],
-    "description": "India's largest manufacturer of ceramic and vitrified tiles, boasting high-resolution digital prints.",
-    "overview": "India's largest manufacturer of ceramic and vitrified tiles, boasting high-resolution digital prints. Trusted market leader known for high reliability, quality standards, and broad distribution network.",
-    "faqs": [
-      {
-        "q": "What is the warranty or lifespan of Kajaria Ceramics products?",
-        "a": "Typically Kajaria Ceramics products carry industry-standard warranties ranging from 1 to 10 years depending on the specific product grade and installation practices."
-      },
-      {
-        "q": "Does Kajaria Ceramics conform to BIS standards?",
-        "a": "Yes, all structural and main products are fully certified under national standards and carry necessary safety/quality markings."
-      }
-    ]
+    {
+      "id": "kajaria-ceramics",
+      "name": "Kajaria Ceramics",
+      "logo": "🧱",
+      "categories": [
+          "Tiles & Flooring",
+          "Interior & Finishing"
+      ],
+      "origin": "India",
+      "established": 1988,
+      "headquarters": "New Delhi",
+      "priceSegment": "Mid",
+      "certifications": [
+          "IS 15622:2017",
+          "ISO 9001 (Quality)",
+          "ISO 14001 (Environment)",
+          "CE Certified (Europe)"
+      ],
+      "products": [
+          "Kajaria The Ultima (Extra-Large Glazed Vitrified Slabs)",
+          "Kajaria Eternity Polished Vitrified Tiles (PVT)",
+          "Kajaria Gres Tough Heavy-Duty Outdoor Tiles",
+          "Kajaria Ceramic Wall & Floor Tiles",
+          "Kajaria Step & Riser Staircase Tiles"
+      ],
+      "applications": [
+          "High-Traffic Commercial Flooring",
+          "Residential Living Rooms & Bedrooms",
+          "Kitchen Wall Backsplashes",
+          "Heavy-Footfall Outdoor Patios & Driveways",
+          "Bathroom Flooring with Anti-Skid R10 Ratings"
+      ],
+      "advantages": [
+          "Ultra-low water absorption coefficient (<0.05% for vitrified series)",
+          "Stain and scratch resistant Nano-Polish surface finish",
+          "Massive array of marble-look digital prints up to 1200x2400mm slabs",
+          "Certified high breaking strength conforming to ISO 13006 / IS 15622"
+      ],
+      "limitations": [
+          "Requires specialized 2-man suction handling and flexible polymer adhesive for extra-large slabs",
+          "Surface gloss can be slippery when wet if anti-skid finish is omitted"
+      ],
+      "website": "https://www.kajariaceramics.com",
+      "relatedBrands": [
+          "somany-ceramics",
+          "johnson-tiles"
+      ],
+      "description": "Kajaria Ceramics is India's largest ceramic and vitrified tile manufacturer with an aggregate annual capacity exceeding 86 million square meters across multiple cutting-edge manufacturing facilities.",
+      "overview": "Kajaria Ceramics Limited is India's premier manufacturer of ceramic wall and floor tiles, glazed vitrified tiles (GVT), and polished vitrified tiles (PVT). Established in 1988, Kajaria has pioneered large-format porcelain slabs and digital glazing technologies in the Indian subcontinent, conforming to rigorous national standards IS 15622 and European CE certifications.",
+      "faqs": [
+          {
+              "q": "What is the water absorption rate of Kajaria vitrified tiles?",
+              "a": "Kajaria Eternity Glazed Vitrified Tiles (GVT) and Polished Vitrified Tiles (PVT) feature a water absorption rate of less than 0.05%, far exceeding the IS 15622 requirement of less than 0.5%. This virtually impermeable structure prevents water staining, frost cracks, and efflorescence."
+          },
+          {
+              "q": "Which adhesive is recommended for installing large Kajaria slabs?",
+              "a": "For Kajaria Ultima large-format porcelain slabs (800x1600mm and above), traditional cement-sand mortar is prohibited. Use Type 2 or Type 3 polymer-modified cementitious adhesives conforming to IS 15477 (such as Laticrete or Dr. Fixit tile adhesives) with back-buttering."
+          },
+          {
+              "q": "Does Kajaria conform to Indian BIS standards?",
+              "a": "Yes. All Kajaria tiles are certified under BIS standard IS 15622:2017 for pressed ceramic tiles, as well as ISO 9001 (Quality Management), ISO 14001 (Environmental Management), and OHSAS 18001 certifications."
+          }
+      ]
   },
   {
     "id": "somany-ceramics",
@@ -2616,56 +2628,70 @@ export const brandsData: Brand[] = [
       }
     ]
   },
-  {
-    "id": "action-tesa",
-    "name": "Action Tesa",
-    "logo": "🪵",
-    "categories": [
-      "Plywood",
-      "Laminates"
-    ],
-    "origin": "India",
-    "established": 2010,
-    "headquarters": "New Delhi",
-    "priceSegment": "Mid",
-    "certifications": [
-      "ISO 9001",
-      "IS 14587"
-    ],
-    "products": [
-      "Action Tesa HDMR (High Density Water Resistant)",
-      "Action Tesa MDF Boards",
-      "Action Tesa Wooden Laminated Flooring"
-    ],
-    "applications": [
-      "Modular Furniture carcasses",
-      "Laminated Room Floorings",
-      "Wall Paneling"
-    ],
-    "advantages": [
-      "HDMR boards replace plywood at lower cost with higher water resistance",
-      "Termite resistant"
-    ],
-    "limitations": [
-      "Cannot be carved or edge-polished easily without edge banding tape"
-    ],
-    "website": "https://www.actiontesa.com",
-    "relatedBrands": [
-      "greenply",
-      "merino-laminates"
-    ],
-    "description": "Pioneers of HDMR (High Density Moisture Resistant) fiberboards, redefining modular kitchen core panels.",
-    "overview": "Pioneers of HDMR (High Density Moisture Resistant) fiberboards, redefining modular kitchen core panels. Trusted market leader known for high reliability, quality standards, and broad distribution network.",
-    "faqs": [
-      {
-        "q": "What is the warranty or lifespan of Action Tesa products?",
-        "a": "Typically Action Tesa products carry industry-standard warranties ranging from 1 to 10 years depending on the specific product grade and installation practices."
-      },
-      {
-        "q": "Does Action Tesa conform to BIS standards?",
-        "a": "Yes, all structural and main products are fully certified under national standards and carry necessary safety/quality markings."
-      }
-    ]
+    {
+      "id": "action-tesa",
+      "name": "Action TESA",
+      "logo": "🪵",
+      "categories": [
+          "Plywood & Timber",
+          "Interior & Finishing"
+      ],
+      "origin": "India",
+      "established": 1972,
+      "headquarters": "New Delhi",
+      "priceSegment": "Mid",
+      "certifications": [
+          "IS 14587 (Pre-laminated Panels)",
+          "IS 12406 (MDF Standards)",
+          "ISO 9001",
+          "European E1 Emission Grade"
+      ],
+      "products": [
+          "Action TESA HDHMR Board (High Density High Moisture Resistance)",
+          "Action TESA Boilo Boiling Water Resistant Board",
+          "Action TESA Pre-Laminated Particle Board",
+          "Action TESA Embossed HDF Laminate Flooring",
+          "Action TESA Polygloss High Shine UV Panels"
+      ],
+      "applications": [
+          "Kitchen Base Cabinets & Under-Sink Vanities",
+          "Commercial Office Desking & Modular Workstations",
+          "Wardrobes & Sliding Shutter Furniture",
+          "High-Traffic Retail Wooden Flooring",
+          "Acoustic Wall Paneling & Decorative Partitions"
+      ],
+      "advantages": [
+          "Pioneered genuine green-core HDHMR technology in India with uniform density >850 kg/m³",
+          "Exceptional screw-holding strength on both faces and edges",
+          "Termite and borer resistant formulations with low thickness swelling (<5% after 24 hrs)",
+          "Cost savings of 25% to 40% compared to traditional marine plywood with zero surface core voids"
+      ],
+      "limitations": [
+          "Heavier per sheet than traditional commercial plywood due to uniform high core compaction",
+          "Requires carbide-tipped cutting blades to prevent edge chipping during rapid saw passes"
+      ],
+      "website": "https://www.actiontesa.com",
+      "relatedBrands": [
+          "greenlam-industries",
+          "century-plyboards",
+          "greenpanel-industries"
+      ],
+      "description": "Action TESA is India's largest and most technologically advanced manufacturer of HDHMR, MDF, Particle Board, and engineered wood flooring products.",
+      "overview": "Action TESA, part of the multi-decade Action Group conglomerate, operates India's largest integrated engineered wood manufacturing facility. Renowned for inventing the green-core HDHMR (High Density High Moisture Resistance) board, the company has transformed modern interior joinery by providing homogeneous, knot-free, moisture-resistant wood panels certified under national BIS specifications IS 14587 and IS 12406.",
+      "faqs": [
+          {
+              "q": "Is Action TESA HDHMR waterproof?",
+              "a": "Action TESA HDHMR is high moisture-resistant with a water absorption rate and thickness swelling far below standard MDF (<5%). For continuous water immersion (such as bathroom partitions or wet kitchens), Action TESA manufactures 'Boilo', a boiling water proof (BWP) board designed to resist extreme moisture."
+          },
+          {
+              "q": "Can Action TESA HDHMR replace marine plywood?",
+              "a": "Yes, for internal furniture, wardrobes, modular kitchens, and office partitions, HDHMR provides uniform density with zero internal core gaps or waviness, allowing smoother laminate bonding and precision CNC routing at significantly lower cost than calibrated marine plywood."
+          },
+          {
+              "q": "What BIS standards does Action TESA comply with?",
+              "a": "Action TESA boards are manufactured in compliance with IS 14587 (Specification for Preliminary Pre-Laminated Wood-based Panels), IS 12406 (Medium Density Fibreboards for General Purposes), and European E1/E2 low-emission emission standards."
+          }
+      ]
   },
   {
     "id": "cera",
@@ -3682,56 +3708,71 @@ export const brandsData: Brand[] = [
       }
     ]
   },
-  {
-    "id": "myk-laticrete",
-    "name": "MYK Laticrete",
-    "logo": "🇺🇸",
-    "categories": [
-      "Construction Chemicals",
-      "Adhesives & Sealants"
-    ],
-    "origin": "USA / India",
-    "established": 1999,
-    "headquarters": "Hyderabad, Telangana",
-    "priceSegment": "Mid",
-    "certifications": [
-      "ANSI Standards",
-      "IS 15477"
-    ],
-    "products": [
-      "Laticrete 307 (Tile adhesive)",
-      "Laticrete Latapoxy 300 (Epoxy grout)",
-      "Laticrete 290 (Premium mortar)"
-    ],
-    "applications": [
-      "Bathroom Tile Grouting",
-      "Granite Slab pasting",
-      "Glass Mosaic Wall tiles"
-    ],
-    "advantages": [
-      "Epoxy grouts are completely stain and acid proof",
-      "Great tile adhesion ratings"
-    ],
-    "limitations": [
-      "Epoxy grout requires rapid clean-up during installation before it cures on tile face"
-    ],
-    "website": "https://www.myklaticrete.com",
-    "relatedBrands": [
-      "mapei",
-      "pidilite"
-    ],
-    "description": "A joint venture with Laticrete USA, the pioneer of stain-free epoxy tile grouts and thin-set adhesives.",
-    "overview": "A joint venture with Laticrete USA, the pioneer of stain-free epoxy tile grouts and thin-set adhesives. Trusted market leader known for high reliability, quality standards, and broad distribution network.",
-    "faqs": [
-      {
-        "q": "What is the warranty or lifespan of MYK Laticrete products?",
-        "a": "Typically MYK Laticrete products carry industry-standard warranties ranging from 1 to 10 years depending on the specific product grade and installation practices."
-      },
-      {
-        "q": "Does MYK Laticrete conform to BIS standards?",
-        "a": "Yes, all structural and main products are fully certified under national standards and carry necessary safety/quality markings."
-      }
-    ]
+    {
+      "id": "myk-laticrete",
+      "name": "MYK Laticrete",
+      "logo": "🧪",
+      "categories": [
+          "Construction Chemicals",
+          "Tiles & Flooring",
+          "Waterproofing"
+      ],
+      "origin": "India / USA (Joint Venture)",
+      "established": 1999,
+      "headquarters": "Hyderabad",
+      "priceSegment": "Premium",
+      "certifications": [
+          "IS 15477:2019 (Type 1, 2, 3, 4)",
+          "ANSI A118 Standards",
+          "ISO 9001",
+          "Green Building LEED Certified"
+      ],
+      "products": [
+          "Laticrete 307 Floor & Wall Tile Adhesive",
+          "Laticrete 335 Super Flexible Multipurpose Adhesive",
+          "Latapoxy 300 Chemical Resistant Epoxy Adhesive",
+          "Latapoxy SP-100 Stain-Free Epoxy Grout",
+          "Laticrete Hydro Ban Waterproofing Membrane"
+      ],
+      "applications": [
+          "Interior & Exterior Tile and Stone Cladding",
+          "Commercial Swimming Pools & Water Reservoirs",
+          "High-Movement Plywood & Gypsum Substrates",
+          "Heavy Chemical Industrial Flooring",
+          "Subway & Airport High-Traffic Paving"
+      ],
+      "advantages": [
+          "Pioneered 100% stain-free and chemical-resistant epoxy grouts",
+          "Superior shear bond strength exceeding 1.5 MPa on varied substrates",
+          "High flexibility accommodating thermal shock and seismic structural movement",
+          "Zero VOC formulations supporting green building LEED accreditations"
+      ],
+      "limitations": [
+          "Higher initial material cost compared to traditional site-mixed sand-cement mortar",
+          "Epoxy grouts require prompt cleaning within the working pot-life window to avoid residue haze"
+      ],
+      "website": "https://www.myklaticrete.com",
+      "relatedBrands": [
+          "pidilite-industries",
+          "sika-india",
+          "fosroc-chemicals"
+      ],
+      "description": "MYK Laticrete is a premier joint venture delivering world-renowned American tile and stone installation technologies, setting benchmark standards for adhesives, grouts, and waterproofing systems.",
+      "overview": "MYK Laticrete India is an engineering joint venture with Laticrete International Inc. (USA), bringing over six decades of advanced polymer chemistry to the subcontinent. Recognized for revolutionizing tile and stone fixing, the brand manufactures specialized polymer-modified adhesives, 100% solid epoxy grouts, waterproofing membranes, and floor leveling mortars complying with ANSI A118 and IS 15477 standards.",
+      "faqs": [
+          {
+              "q": "What is the difference between MYK Laticrete 307 and 335?",
+              "a": "Laticrete 307 is a standard polymer-modified thin-bed adhesive designed for ceramic and vitrified tiles on rigid concrete substrates. Laticrete 335 is a premium fiber-reinforced, ultra-flexible polymer adhesive capable of bonding large vitrified slabs and natural stones to flexible substrates like exterior facades and plywood."
+          },
+          {
+              "q": "Why is Latapoxy SP-100 epoxy grout preferred over cement grout?",
+              "a": "Unlike cementitious grouts that are porous and absorb water, grease, and stains, Latapoxy SP-100 is a 100% stain-resistant, waterproof, acid-proof, and anti-fungal epoxy grout that never fades, cracks, or harbors mildew in kitchens and wet bathrooms."
+          },
+          {
+              "q": "Which IS standards govern MYK Laticrete adhesives?",
+              "a": "MYK Laticrete products are engineered to conform to IS 15477:2019 (Classification and Specification for Adhesives for Use with Ceramic Tiles and Stones) across Type 1, Type 2, Type 3, and Type 4 performance criteria, as well as EN 12004 C2TE S1/S2 standards."
+          }
+      ]
   },
   {
     "id": "fevicol",

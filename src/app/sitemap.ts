@@ -4,6 +4,7 @@ import { articlesData } from '../data/articlesData';
 import { blogData } from '../data/blogData';
 import { resourcesData } from '../data/resourcesData';
 import { categoriesData } from '../data/categoriesData';
+import { brandsData } from '../data/brandsData';
 
 import { SITE_URL } from '@/config/seo';
 
@@ -79,5 +80,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPaths, ...materialPaths, ...guidePaths, ...blogPaths, ...resourcePaths, ...categoryPaths];
+  // Dynamic brand paths
+  const brandPaths = brandsData.map((b) => ({
+    url: `${baseUrl}/brands/${b.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPaths, ...materialPaths, ...guidePaths, ...blogPaths, ...resourcePaths, ...categoryPaths, ...brandPaths];
 }

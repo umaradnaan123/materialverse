@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const title = `${brand.name} | Verified Specifications & Certifications`;
-  const description = `Examine ${brand.name} details: headquarters in ${brand.headquarters}, Origin: ${brand.origin}, established in ${brand.established}. Certifications: ${brand.certifications.join(', ')}.`;
+  const title = `${brand.name}: Products, BIS Standards & Technical Specifications | MaterialVerse`;
+  const description = `Examine ${brand.name} verified products, applications, BIS/ISO certifications (${brand.certifications.slice(0, 3).join(', ')}), durability, and selection guidance in MaterialVerse.`;
 
   return {
     title,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `${SITE_URL}/brands/${id}`,
     },
     robots: {
-      index: false,
+      index: true,
       follow: true,
     },
     openGraph: {

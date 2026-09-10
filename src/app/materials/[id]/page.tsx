@@ -107,7 +107,7 @@ export default async function Page({ params }: Props) {
         "@type": "ListItem",
         "position": 2,
         "name": "Materials",
-        "item": `${SITE_URL}`
+        "item": `${SITE_URL}/materials`
       },
       {
         "@type": "ListItem",
@@ -129,7 +129,7 @@ export default async function Page({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="max-w-5xl mx-auto px-4 md:px-8">
-        <Breadcrumbs items={[{ label: "Materials" }, { label: material.name }]} />
+        <Breadcrumbs items={[{ label: "Materials", path: "/materials" }, { label: material.name }]} />
       </div>
       <MaterialClientWrapper id={id} />
     </>
